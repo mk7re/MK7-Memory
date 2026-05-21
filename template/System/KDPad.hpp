@@ -49,6 +49,15 @@ BEGIN_NAMESPACE(System)
             BUTTON_DPAD_RIGHT = 0x400,
         };
 
+        // NOTE: Name is made up
+        // Used by `KDPadDataOnFrame.m_raw_buttons`
+        enum RawButtonInputEnum : u32 {
+            RAW_BUTTON_A = 0x0001,
+            RAW_BUTTON_B = 0x0002,
+            RAW_BUTTON_L = 0x2000,
+            RAW_BUTTON_R = 0x4000
+        };
+
         // TODO
         virtual Object::DTIClassInfo *getDTIClassInfo() const;
         virtual Object::DTIClassInfo *getDTIClass() const;

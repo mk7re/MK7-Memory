@@ -23,6 +23,7 @@ BEGIN_NAMESPACE(System)
         /M/KDPadBinData m_input_data/0x27d8/0x24/
         /M/KDPadDirector *m_director/0x4/0x27fc/
         /M/bool m_is_gyro_mode/0x1/0x2800/
-        /M/bool m_0x2801/0x1/0x2801/
+        // Set to `true` when a player replay ends.
+        /M/bool m_finished_replay_playback/0x1/0x2801/
     /END/
 }
