@@ -186,13 +186,15 @@ BEGIN_NAMESPACE(Sequence)
         /M/s32 m_0xA0/0x4/0xA0/
         /M/s32 m_0xA4/0x4/0xA4/
         /M/s32 m_0xA8/0x4/0xA8/
-        // / Controls created in the `Sequence::BasePage::setupControl_*` functions are appended to this array
+        // Controls created in the `Sequence::BasePage::setupControl_*` functions are appended to this array
         /M/sead::FixedPtrArray<UI::BaseFastControl, 100> m_controls/0x19C/0xAC/
         // Controls that are common to most menus, such as the B button and others.
+        // These controls are updated when `m_menu_state` == STATE_OPEN or STATE_CLOSED (`see pageStep`)
         // Controls created in the `Sequence::BasePage::setupMenuControl_*` functions are appended to this array
         /M/s32 m_num_menu_controls/0x4/0x248/
         /M/sead::FixedPtrArray<UI::BaseFastControl, 15> *m_menu_controls/0x4/0x24C/
-        // / Controls created in the `Sequence::BasePage::setupBothControl_*` functions are appended to this array
+        // Controls created in the `Sequence::BasePage::setupBothControl_*` functions are appended to this array
+        // These controls are always updated, no matter the current `m_menu_state` we're currently in.
         /M/sead::FixedPtrArray<UI::BaseFastControl, 3> m_both_controls/0x18/0x250/
         /M/u8 m_0x268/0x1/0x268/
         /M/bool m_in_MMenCheckPage/0x1/0x269/

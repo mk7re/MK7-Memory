@@ -16,7 +16,7 @@ BEGIN_NAMESPACE(System)
             /M/u16 m_buttons/0x2/0x0/
             /M/s8 m_stick_x/0x1/0x2/
             /M/s8 m_stick_y/0x1/0x3/
-            /M/bool m_0x4/0x1/0x4/
+            /M/bool m_update_inputs/0x1/0x4/
             /M/sead::Vector2f m_raw_stick/0x8/0x8/
             /M/u32 m_raw_buttons/0x4/0x10/
             /M/bool m_holding_start_or_select/0x1/0x14/
