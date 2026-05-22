@@ -16,6 +16,9 @@ BEGIN_NAMESPACE(RaceSys)
 		};
 		static_assert(sizeof(EFlags) == 0x4);
 
+        bool calcFromRank(LapRankChecker *, bool);
+        void allGoal(LapRankChecker *);
+
         /M/EFlags m_flags/0x4/0x40/
         /M/u16 m_player_id/0x2/0x44/
         /M/u16 m_coins/0x2/0x46/
