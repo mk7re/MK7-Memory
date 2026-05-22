@@ -13,6 +13,9 @@ BEGIN_NAMESPACE(Sequence)
 {
     /START_CLASS/NAME@BaseMenuPage/SIZE@0x294/BASE@BasePage/BSIZE@0x26C/VTABLE@True/
     public:
+        // Set to `true` when `System::g_movie_params` is initialized (done in `BaseMenuPage`'s constructor)
+        static bool s_movie_params_initialized;         // 0x006634e0 (VERSION_USA_REV1)
+
         struct ControlDisplayFlags
 		{
 			u8

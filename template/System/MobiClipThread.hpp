@@ -26,9 +26,14 @@ BEGIN_NAMESPACE(System)
     /START_CLASS/NAME@MobiClipThread/SIZE@0x16C0/BASE@KDThread/BSIZE@0xA4/VTABLE@True/
     public:
         // NOTE: Name is made up
+        /START_STRUCT/NAME@Params/SIZE@0x8C/
+        /END/
+
+        // NOTE: Name is made up
         /START_CLASS/NAME@Info/SIZE@0x168/
         public:
             /M/VideoDrawerThread *m_video_drawer_thread/0x4/0x0/
+            /M/Params *m_params/0x4/0x98/
             /M/bool m_is_stopped/0x1/0x161/
             /M/bool m_in_calc_state/0x1/0x167/
         /END/
@@ -49,6 +54,7 @@ BEGIN_NAMESPACE(System)
         void stopMovie();                               // 0x0017e6b8 (VERSION_USA_REV1)
         void stopMovieAndFreeResources();               // 0x0017db88 (VERSION_USA_REV1)
         void terminate();                               // 0x0017f2e0 (VERSION_USA_REV1)
+        void applyParams(const Params &);               // 0x0017e084 (VERSION_USA_REV1)
         // Might be a static `BaseMenuPage` or `MenuMoviePageBase` function, based on the address?
         static void playMovie(const char *, bool);      // 0x004a4370 (VERSION_USA_REV1)
 
@@ -65,5 +71,8 @@ BEGIN_NAMESPACE(System)
         /M/nw::lyt::Picture *m_movie_pane/0x4/0x0/      // Usually `P_movie_dammy`
         /M/MobiClipThread *mobiclip_thread/0x4/0x4/
     /END/
+
+    extern MobiClipThread::Params unk_0069438c[5];      // 0x0069438c (VERSION_USA_REV1)
+    extern MobiClipThread::Params g_movie_params[8];    // 0x00692a64 (VERSION_USA_REV1)
 #endif
 }
