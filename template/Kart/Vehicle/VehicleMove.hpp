@@ -98,6 +98,11 @@ BEGIN_NAMESPACE(Kart)
 		/M/BoostFlags m_boost_flags_previous_frame/0x4/0xC2C/
 		/M/StatusFlags m_status_flags/0x4/0xC30/
 		/M/StatusFlags m_status_flags_previous_frame/0x4/0xC34/
+		/M/sead::Vector3f m_xyz_speed_vec/0xC/0xC60/
+		/M/sead::Vector3f m_prev_xyz_speed_vec/0xC/0xC6C/
+		// The speed of the vehicle that also includes the effect of other external forces. Capped to 30.0f
+		/M/f32 m_xyz_speed/0x4/0xC78/
+		/M/f32 m_xyz_speed_ratio/0x4/0xC7C/
 		/M/s32 m_air_frames/0x4/0xD48/
 		/M/s32 m_ground_frames/0x4/0xD50/
 		/M/sead::Vector3f m_front_pitch/0xC/0xD6C/
