@@ -9,8 +9,18 @@ BEGIN_NAMESPACE(Net)
     public:
         enum class EEventType : u8
         {
-            SelfMove = 2,
-            InitUse = 9,
+            InitBurst,
+            SevenFrame,
+            SelfMove,
+            SevenInitUse,
+            UpdateKartItem_DestroyOther,
+            UpdateKartItem_DestroySelf,
+            InitSpin,
+            Action,
+            Seven,
+            InitUse,
+            UseExpire,
+            MAX
         };
 
         /START_STRUCT/NAME@SlotData/SIZE@0x9/
