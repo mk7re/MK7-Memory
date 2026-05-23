@@ -11,7 +11,8 @@ BEGIN_NAMESPACE(UI)
 {
     /START_CLASS/NAME@NwlytControlSightBase/SIZE@0xC/BASE@ControlSight/BSIZE@0x4/VTABLE@True/
     public:
-        virtual void* getRuntimeTypeInfo(); // 0
+        SEAD_RTTI_OVERRIDE(NwlytControlSightBase, ControlSight)
+        
         virtual void _0x4(); // 1 (__sub_object)
         virtual s32 build(const CreateArg*) = 0; // 3
         virtual void calc() = 0; // 4
