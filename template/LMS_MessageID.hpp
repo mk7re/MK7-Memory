@@ -283,7 +283,7 @@ BEGIN_GLOBAL_NAMESPACE
         FriendsOpponents = 2095,
         Communities = 2096,
 
-        GrandPrix = 2200,
+        GrandPrix_1 = 2200,
         TimeTrials = 2201,
         BalloonBattle = 2202,
         CoinRunners = 2203,
@@ -317,7 +317,7 @@ BEGIN_GLOBAL_NAMESPACE
         Losses = 6407,
         CoinsCollected = 6408,
 
-        GrandPrix = 6411,
+        GrandPrix_2 = 6411,
 
         Activated = 6441,
         Deactivated = 6442,
