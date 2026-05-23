@@ -35,12 +35,17 @@ BEGIN_NAMESPACE(Sequence)
 
         static void convertEnterCodeImpl(const sead::SafeString &);
 
+        /U/bool/0x1/0x294/
+        /U/bool/0x1/0x295/
         /M/RaceSys::ECourseID m_course/0x4/0x298/
         /M/System::GhostLoader *m_ghost_loader/0x4/0x29c/
         /M/Sequence::GhostList *m_ghost_list_ptr/0x4/0x2a0/
         /M/Sequence::GhostList m_ghost_list/0x280/0x2a4/
         /M/s32 m_max_selected_ghost_num/0x4/0x52c/
         /M/s32 m_selected_ghosts[7]/0x1c/0x530/
+        /U/bool/0x1/0x54c/
+        /U/u8/0x1/0x54d/
         /U/s32/0x4/0x550/
+        /U/bool/0x1/0x554/
     /END/
 }

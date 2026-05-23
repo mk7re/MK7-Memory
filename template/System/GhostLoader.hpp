@@ -36,7 +36,8 @@ BEGIN_NAMESPACE(System)
         /M/sead::Delegate<GhostLoader> m_update_inner/0x10/0x1254/
         /U/RaceSys::ECourseID/0x4/0x1264/
         /U/bool/0x1/0x1269/
-        /U/u8/0x1/0x126b/
+        /U/bool/0x1/0x126a/
+        /U/bool/0x1/0x126b/
         /M/s32 m_ranking_ghost_load_state/0x4/0x126c/
         /M/GhostSaveData *m_ranking_ghost_data/0x4/0x1270/
         /M/RaceSys::ECourseID m_ranking_ghost_course/0x4/0x1274/
