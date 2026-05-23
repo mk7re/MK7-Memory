@@ -4,8 +4,7 @@
 
 BEGIN_NAMESPACE(Util)
 {
-    template <class T>
-    /START_CLASS/NAME@TLinkNode/SIZE@0xC/SIZEOF@TLinkNode<void>/
+    /START_CLASS/NAME@TLinkNode/TEMPLATE@template <class T>/SIZE@0xC/SIZEOF@TLinkNode<void>/
     public:
         /M/TLinkNode<T> *m_prev/0x4/0x0/
         /M/TLinkNode<T> *m_next/0x4/0x4/

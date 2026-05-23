@@ -6,8 +6,7 @@
 
 BEGIN_NAMESPACE(Util)
 {
-    template <class T>
-    /START_CLASS/NAME@TIndLinkList/SIZE@0x10/SIZEOF@TIndLinkList<void>/VTABLE@True/
+    /START_CLASS/NAME@TIndLinkList/TEMPLATE@template <class T>/SIZE@0x10/SIZEOF@TIndLinkList<void>/VTABLE@True/
     public:
         virtual bool append(TLinkNode<T> *); // 0
         virtual bool prepend(TLinkNode<T> *); // 1

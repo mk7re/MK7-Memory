@@ -4,8 +4,7 @@
 
 BEGIN_NAMESPACE(Util)
 {
-    template <class T>
-    /START_CLASS/NAME@TStateObserver/SIZE@0x20/SIZEOF@TStateObserver<void>/VTABLE@True/
+    /START_CLASS/NAME@TStateObserver/TEMPLATE@template <class T>/SIZE@0x20/SIZEOF@TStateObserver<void>/VTABLE@True/
     public:
         struct StateCallInfo {
             union {
@@ -66,8 +65,7 @@ BEGIN_NAMESPACE(Util)
         /M/u8 m_state_amount/0x1/0x1C/        
     /END/
 
-    template <class T>
-    /START_CLASS/NAME@TStateObserverEx/SIZE@0x20/SIZEOF@TStateObserverEx<void>/VTABLE@True/
+    /START_CLASS/NAME@TStateObserverEx/TEMPLATE@template <class T>/SIZE@0x20/SIZEOF@TStateObserverEx<void>/VTABLE@True/
     public:
         void update(void) {
             this->m_state_counter++;

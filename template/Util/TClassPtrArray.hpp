@@ -6,12 +6,9 @@
 
 BEGIN_NAMESPACE(Util)
 {
-    template <typename T>
-    class TClassPtrArray
-    {
+    /START_CLASS/NAME@TClassPtrArray/TEMPLATE@template <typename T>/SIZE@0x10/SIZEOF@TClassPtrArray<void>/
     public:
-        sead::PtrArray<T> m_ptr_array;
-        u8 m_unk;
-    };
-    static_assert(sizeof(TClassPtrArray<void *>) == 0x10);
+        /M/sead::PtrArray<T> m_ptr_array/0xC/0x0/
+        /M/u8 m_unk/0x1/0xC/
+    /END/
 }
