@@ -272,6 +272,22 @@ BEGIN_GLOBAL_NAMESPACE
         Cancel = 2005,
         Next = 2006,
 
+        MarioKart7UpdateDataAvailable = 2080,
+        MarioKart7HasBeenUpdated = 2081,
+
+        SinglePlayer = 2090,
+        LocalMultiplayer = 2091,
+        OnlineMultiplayer = 2092,
+        MarioKartChannel = 2093,
+        Worldwide = 2094,
+        FriendsOpponents = 2095,
+        Communities = 2096,
+
+        GrandPrix = 2200,
+        TimeTrials = 2201,
+        BalloonBattle = 2202,
+        CoinRunners = 2203,
+        VS = 2204,
         Race = 2205,
         Battle = 2206,
 
