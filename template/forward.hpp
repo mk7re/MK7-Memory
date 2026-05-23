@@ -29,6 +29,8 @@ BEGIN_NAMESPACE(Effect)
 	class EffectEngine;
 	class GameEffectDirector;
 	class GameParticle;
+	class GPUPtclStripe;
+	class GPUPtclStripeImpl;
 	class KartEffect;
 	class ParticleDrawer;
 }
