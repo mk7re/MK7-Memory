@@ -22,7 +22,7 @@ BEGIN_NAMESPACE(UI)
         void setMiiName(const sead::WSafeString &);
         void setEngineLevel(RaceSys::EEngineLevel);
         void setNumber(s32, s32);
-        void setString(const sead::WFixedSafeString<(s32)128> &);
+        void setString(const sead::WFixedSafeString<128> &);
         DashMessageArg();
     /END/
 }

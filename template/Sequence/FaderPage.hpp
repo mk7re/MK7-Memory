@@ -11,7 +11,7 @@ BEGIN_NAMESPACE(Sequence)
 {
     BEGIN_NAMESPACE(Fader)
     {
-        enum class EFaderType : u32
+        enum class EFaderType : u8
         {
             FADE_IN_BLACK,
             FADE_IN_WHITE,

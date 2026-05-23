@@ -288,10 +288,14 @@ BEGIN_NAMESPACE(Sequence)
 	class DummyPage;
 	class DelegateSequence;
 	class ExecutableSection;
+	class FaderPage;
 	class LayeredSequence;
 	class MenuData;
 	class MenuSingle_Ghost;
 	class MenuSingle_GhostLoad;
+	class MenuSingle_Chara;
+	class MenuWifi_Confirm;
+	class Menu_UpBarController;
 	class MenuTitle;
 	class NetworkErrorChecker;
 	class Page;
@@ -309,6 +313,7 @@ BEGIN_NAMESPACE(Sequence)
 	class SequenceLayer;
 	class SerialSequence;
 	class TimerPage;
+	class TimeAttackChart;
 	class SequenceResource;
 }
 
