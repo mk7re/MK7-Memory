@@ -3,6 +3,7 @@
 #include "../types.hpp"
 #include "Common_SystemDialog.hpp"
 #include "FaderPage.hpp"
+#include "../RaceSys/RaceInfo/CRaceInfo.hpp"
 #include "../RaceSys/ECourseID.hpp"
 #include "../Utility/Random.hpp"
 
@@ -12,6 +13,7 @@ BEGIN_NAMESPACE(Sequence)
 {
     /START_CLASS/NAME@MenuData/SIZE@0x978/
     public:
+        // NOTE: guessed name
         /START_STRUCT/NAME@CourseVote/SIZE@0x8/
             /M/s32 station_id/0x4/0x0/
             /M/RaceSys::ECourseID course_id/0x4/0x4/
@@ -23,6 +25,7 @@ BEGIN_NAMESPACE(Sequence)
         /M/TimerPage *m_timer_page/0x4/0x20/
         /M/MenuSingle_Ghost *m_menu_single_ghost/0x4/0x2c/
         /M/BaseRacePage *m_base_race_page/0x4/0x30/
+        /M/RaceSys::CRaceInfo m_race_info/0x190/0x74/
         /M/sead::PtrArray<CourseVote> m_course_votes/0xc/0x72c/
     /END/
 
