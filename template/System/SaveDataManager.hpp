@@ -4,6 +4,7 @@
 #include "../types.hpp"
 
 #include "KDThread.hpp"
+#include "SystemSaveData.hpp"
 
 BEGIN_NAMESPACE(System)
 {
@@ -40,6 +41,9 @@ BEGIN_NAMESPACE(System)
         EErrorCode loadGhostList_();
         EErrorCode getSystemIndexes(s32 *, s32 *);
         EErrorCode format_();
+
+        /M/SystemSaveData *m_system_save_data_ptr/0x4/0xA8/
+        /M/SystemSaveData m_system_save_data/0x50d4/0xB8/
     /END/
 
     SaveDataManager *GetSaveDataManager();
