@@ -95,8 +95,10 @@ BEGIN_NAMESPACE(Field)
 BEGIN_NAMESPACE(Item)
 {
 	class ItemDirector;
+	class ItemObjBanana;
 	class ItemObjBananaDirector;
 	class ItemObjBase;
+	class ItemObjBomhei;
 	class ItemObjBomheiDirector;
 	class ItemObjDirectorBase;
 	class ItemObjFlower;
@@ -105,6 +107,7 @@ BEGIN_NAMESPACE(Item)
 	class ItemObjGessoDirector;
 	class ItemObjKiller;
 	class ItemObjKillerDirector;
+	class ItemObjKinoko;
 	class ItemObjKinokoDirector;
 	class ItemObjKouraB;
 	class ItemObjKouraBDirector;
@@ -115,7 +118,9 @@ BEGIN_NAMESPACE(Item)
 	class ItemObjSevenDirector;
 	class ItemObjStar;
 	class ItemObjStarDirector;
+	class ItemObjTail;
 	class ItemObjTailDirector;
+	class ItemObjThunder;
 	class ItemObjThunderDirector;
 	class ItemReactProxy;
 	class ItemSlot;
