@@ -3,6 +3,8 @@
 #include "VehicleBase.hpp"
 #include "../../System/KDPad.hpp"
 
+
+
 BEGIN_NAMESPACE(Kart)
 {
 	/START_CLASS/NAME@VehicleControl/SIZE@0x11C/BASE@VehicleBase/BSIZE@0xE0/
@@ -30,7 +32,7 @@ BEGIN_NAMESPACE(Kart)
 		/M/ViewMode m_current_view_mode/0x4/0xF0/
 		/M/bool m_force_switch_first_person_view/0x1/0xF4/
 		/M/bool m_is_gyro_controls_enabled/0x1/0xF5/
-		/M/::Camera::KartCameraDirector *m_kart_camera_director/0x4/0xF8/
+		/M/GLOBAL_NAMESPACE::Camera::KartCameraDirector *m_kart_camera_director/0x4/0xF8/
 		/M/Controls m_controls/0x4/0xFC/
 		/M/f32 m_stick_x/0x4/0x100/
 		/M/f32 m_gyro_x/0x4/0x104/
