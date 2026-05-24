@@ -10,6 +10,7 @@ The data structures are generated from template files located in the [template](
 
 - [git](https://git-scm.com/downloads)
 - [python3](https://www.python.org/downloads)
+- [devkitPro](https://devkitpro.org/wiki/Getting_Started)
 
 1. Clone the repository locally by running `git clone <repo url> --depth=1 --recurse-submodules --shallow-submodules`.
 2. Run `make` in the repository root directory to generate the header files in the `include` folder.
