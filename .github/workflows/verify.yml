@@ -17,9 +17,9 @@ jobs:
       uses: actions/checkout@v4
       with:
         submodules: recursive
-      
-    - name: build
-      run: make
 
-    - name: verify
+    - name: build and verify (without namespace)
       run: make verify
+
+    - name: build and verify (with namespace)
+      run: make clean; make verify USE_MK7_NAMESPACE=ON

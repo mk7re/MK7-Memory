@@ -9,7 +9,7 @@
 
 BEGIN_NAMESPACE(Sequence)
 {
-    BEGIN_NAMESPACE(Fader)
+    namespace Fader
     {
         enum class EFaderType : u8
         {

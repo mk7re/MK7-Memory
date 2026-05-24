@@ -17,6 +17,8 @@ list(SORT MK7_HEADERS)
 
 set(ALL_HEADERS_HPP "${PROJECT_BINARY_DIR}/all_headers.hpp")
 
+option(USE_MK7_NAMESPACE "Enable MK7MEMORY_NAMESPACE=MK7Memory" OFF)
+
 file(WRITE "${ALL_HEADERS_HPP}" "// Auto-generated — do not edit\n\n")
 
 foreach(h ${MK7_HEADERS})
@@ -31,6 +33,13 @@ target_compile_definitions(header_verify PRIVATE
     NNSDK
     GAME_VERSION=VERSION_USA_REV1
 )
+
+# ---- Add optional define ----
+if(USE_MK7_NAMESPACE)
+    target_compile_definitions(header_verify PRIVATE
+        MK7MEMORY_NAMESPACE=MK7Memory
+    )
+endif()
 
 # devkitPro paths
 set(DEVKITPRO $ENV{DEVKITPRO})
