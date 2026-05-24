@@ -32,9 +32,13 @@ BEGIN_NAMESPACE(System)
         RaceSys::ECourseID init();                                      // TODO. Double check if the return type is correct.
         void update(RaceSys::ECourseID, bool);                          // TODO. Double check if the return type is correct.
 
+        // [0] -> Player ghost
+        // [1] -> Staff ghost (Normal)
+        // [2] -> Staff ghost (Expert)
+        // [3] to [22] -> Ranking ghosts
         /M/GhostData m_ghosts[GHOST_LIST_MAX]/0x1254/0x0/
         /M/sead::Delegate<GhostLoader> m_update_inner/0x10/0x1254/
-        /U/RaceSys::ECourseID/0x4/0x1264/
+        /M/RaceSys::ECourseID m_ghost_course/0x4/0x1264/
         /U/bool/0x1/0x1269/
         /U/bool/0x1/0x126a/
         /U/bool/0x1/0x126b/

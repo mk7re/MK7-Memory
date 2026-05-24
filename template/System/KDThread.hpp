@@ -7,6 +7,7 @@
 BEGIN_NAMESPACE(System)
 {
     // TODO: Inherits from sead::Thread
+    // Size 0xAC in VERSION_USA_REV1
     /START_CLASS/NAME@KDThread/SIZE@0xA4/VTABLE@True/
     public:
         virtual ~KDThread();
