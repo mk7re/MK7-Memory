@@ -53,7 +53,8 @@ BEGIN_NAMESPACE(UI)
 
     /START_CLASS/NAME@NwlytControlSight/SIZE@0x90/BASE@NwlytControlSightBase/BSIZE@0xC/VTABLE@True/
     public:
-        virtual void* getRuntimeTypeInfo(); // 0
+        SEAD_RTTI_OVERRIDE(NwlytControlSight, NwlytControlSightBase)
+
         virtual void _0x8(); // 2 (__deallocating)
         virtual s32 build(const CreateArg*); // 3
         virtual void calc(); // 4
@@ -69,7 +70,8 @@ BEGIN_NAMESPACE(UI)
 
     /START_CLASS/NAME@NwlytDummyControlSight/SIZE@0xA0/BASE@NwlytControlSight/BSIZE@0x90/VTABLE@True/
     public:
-        virtual void* getRuntimeTypeInfo(); // 0
+        SEAD_RTTI_OVERRIDE(NwlytDummyControlSight, NwlytControlSight)
+
         virtual void _0x8(); // 2 (__deallocating)
         virtual s32 build(const CreateArg*); // 3
         virtual void *getElementHandle(const sead::SafeString &, EElementType); // 6
@@ -95,7 +97,8 @@ BEGIN_NAMESPACE(UI)
 
     /START_CLASS/NAME@NwlytDivControlSight/SIZE@0xA4/BASE@NwlytControlSightBase/BSIZE@0xC/VTABLE@True/
     public:
-        virtual void* getRuntimeTypeInfo(); // 0
+        SEAD_RTTI_OVERRIDE(NwlytDivControlSight, NwlytControlSightBase)    
+
         virtual void _0x4(); // 1 (__sub_object)
         virtual s32 build(const CreateArg*) = 0; // 3
         virtual void calc() = 0; // 4
@@ -122,7 +125,8 @@ BEGIN_NAMESPACE(UI)
 
     /START_CLASS/NAME@NwlytDivPartControlSight/SIZE@0xF8/BASE@NwlytDivControlSight/BSIZE@0xA4/VTABLE@True/
     public:
-        virtual void* getRuntimeTypeInfo(); // 0
+        SEAD_RTTI_OVERRIDE(NwlytDivPartControlSight, NwlytDivControlSight)
+
         virtual void _0x8(); // 2 (__deallocating)
         virtual s32 build(const CreateArg*); // 3
         virtual void calc(); // 4
@@ -132,7 +136,8 @@ BEGIN_NAMESPACE(UI)
 
     /START_CLASS/NAME@NwlytDivRootControlSight/SIZE@0xA4/BASE@NwlytDivControlSight/BSIZE@0xA4/VTABLE@True/
     public:
-        virtual void* getRuntimeTypeInfo(); // 0
+        SEAD_RTTI_OVERRIDE(NwlytDivRootControlSight, NwlytDivControlSight)
+        
         virtual void _0x8(); // 2 (__deallocating)
         virtual s32 build(const CreateArg*); // 3
         virtual void calc(); // 4
