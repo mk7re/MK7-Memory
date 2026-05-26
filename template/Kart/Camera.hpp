@@ -40,10 +40,10 @@ BEGIN_NAMESPACE(Kart)
         void calcDraw(const sead::Matrix34f &, f32);
         void calcApply(f32, bool, f32, f32);
 
-        /M/KDRigid m_rigid/0xd0/0x0/
+        /M/KDRigid m_rigid/0xd0/0x0/ // inherited?
         /M/GLOBAL_NAMESPACE::Camera::CameraBase *m_camera_base/0x4/0xd0/
         /M/bool m_is_focused_player/0x1/0xd4/
-        /M/bool m_is_mater_player/0x1/0xd5/
+        /M/bool m_is_master_player/0x1/0xd5/
         /M/InfoProxy *m_info_proxy/0x4/0xd8/
         /M/Vehicle *m_vehicle/0x4/0xdc/
         /M/sead::Vector3f m_target_vehicle_position/0xc/0x130/
@@ -51,6 +51,8 @@ BEGIN_NAMESPACE(Kart)
         /M/f32 m_fovy/0x4/0x170/
         /M/f32 m_depth_level/0x4/0x17c/
         /M/KDGndCol::CheckIF_EX m_check_if_ex/0x10/0x1c0/
+        /U/ParamSet_View/0x14/0x244/
+        /U/ParamSet_View/0x14/0x258/
         /M/DepthLevelMode m_depth_level_mode/0x4/0x270/
         /M/sead::Vector3f m_position_first_person/0xc/0x280/
     /END/
