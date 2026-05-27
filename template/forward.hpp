@@ -469,6 +469,11 @@ BEGIN_NAMESPACE(UI)
 	class ScrollListBg;
 	class MenuCaption;
 	class MenuClassCaption;
+	class UIMenuMiiBarController;
+	class MiiBar;
+	class MiiStrBar;
+	class MiiGroupBar;
+	class MiiCheckBar;
 }
 
 BEGIN_NAMESPACE(Util)

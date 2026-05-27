@@ -36,7 +36,7 @@ BEGIN_NAMESPACE(Sequence)
         // Can display the back (B) button
         TYPE_BACK_BUTTON,
 
-        YPE_MAX
+        TYPE_MAX
     };
 
     /START_CLASS/NAME@Common_SystemDialog/SIZE@0x6C8/BASE@BasePage/BSIZE@0x26C/VTABLE@True/
@@ -55,7 +55,7 @@ BEGIN_NAMESPACE(Sequence)
             // Can display the back (B) button
             TYPE_BACK_BUTTON,
 
-            YPE_MAX
+            TYPE_MAX
         };
 
         enum class SystemDialogResult : u32

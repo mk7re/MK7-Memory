@@ -175,7 +175,7 @@ BEGIN_NAMESPACE(Sequence)
         /M/bool m_allow_attaching_manipulators/0x1/0x80/
         /M/u32 m_num_manipulators/0x4/0x84/
         /M/UI::Manipulator **m_manipulators/0x4/0x88/
-        /M/u8 m_0x8C/0x1/0x8C/
+        /M/bool m_has_manipulators/0x1/0x8C/
         /M/bool m_0x8D/0x1/0x8D/
         /M/u8 m_0x8E/0x1/0x8E/
         /M/u8 m_menu_state/0x1/0x8F/    // See the `BasePageState` enum
