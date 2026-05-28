@@ -84,6 +84,8 @@ BEGIN_NAMESPACE(Sequence)
         /M/sead::WSafeString m_mii_name/0x8/0x7bc/
         /M/FriendApproach m_friend_approach[KART_MAX]/0x80/0x7e0/
         /M/RaceSys::CRaceInfo::CKartInfo m_cpu_kart_infos[KART_MAX - 2]/0x108/0x860/
+        // Set to `true` if CPUs are enabled in the VS / Battle settings
+        /M/bool m_is_cpu_enabled/0x1/0x968/
         /M/u32 m_num_free_player_slots/0x4/0x96c/
     /END/
 
