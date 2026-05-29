@@ -144,6 +144,8 @@ BEGIN_NAMESPACE(Jugem)
 
 BEGIN_NAMESPACE(Kart)
 {
+	class DriverCallback;
+	class DriverHop;
 	class GhostVisible;
 	class WingPathData;
 	class PullPathData;
