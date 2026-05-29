@@ -3,6 +3,7 @@
 #include "../common.hpp"
 #include "../types.hpp"
 #include "../forward.hpp"
+#include "../versions.hpp"
 #include "../System/GhostSaveData.hpp"
 #include "../Item/eItemSlot.hpp"
 #include "../Item/eItemType.hpp"
@@ -189,6 +190,9 @@ BEGIN_NAMESPACE(Sequence)
         void initTime();
         void reloadGhostReplay();
         void reloadGhost(const System::GhostSaveData &);
+#if GAME_VERSION != ALL_DLP
+        void saveRankingData();     // 0x0047e014 (VERSION_USA_REV1)
+#endif
 
         static void convertReturnCodeImpl(s32);
 
