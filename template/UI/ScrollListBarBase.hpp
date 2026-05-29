@@ -28,7 +28,7 @@ BEGIN_NAMESPACE(UI)
         virtual void onScrollUpdate(s32);
 
         /M/ScrollListFrame *m_frame/0x4/0xa8/
-        /M/s32 m_option/0x4/0xac/
+        /M/s32 m_option = -1/0x4/0xac/
     /END/
 #endif
 }
