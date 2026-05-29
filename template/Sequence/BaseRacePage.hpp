@@ -3,7 +3,7 @@
 #include "../common.hpp"
 #include "../types.hpp"
 #include "../forward.hpp"
-#include "../versions.hpp"
+#include "../versions.h"
 #include "../System/GhostSaveData.hpp"
 #include "../Item/eItemSlot.hpp"
 #include "../Item/eItemType.hpp"
