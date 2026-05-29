@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../forward.hpp"
 #include "../types.hpp"
 #include "BasePage.hpp"
 #include "NetworkErrorChecker.hpp"
@@ -84,12 +85,12 @@ BEGIN_NAMESPACE(Sequence)
             SystemDialogData();
 
             /M/s32 m_manipulator_idx/0x4/0x0/
-            /M/void *m_body/0x4/0x4/            // UI::MenuDialogBody *
-            /M/void *m_half_body/0x4/0x8/       // UI::MenuDialogHalfBody *
-            /M/void *m_button_next/0x4/0xc/     // UI::SystemDialogButton *
-            /M/void *m_button_2_yes/0x4/0x10/   // UI::SystemDialogButton *
-            /M/void *m_button_2_no/0x4/0x14/    // UI::SystemDialogButton *
-            /M/void *m_wait_mark/0x4/0x18/      // UI::MenuWaitMark *
+            /M/UI::MenuDialogBody *m_body/0x4/0x4/
+            /M/UI::MenuDialogHalfBody *m_half_body/0x4/0x8/
+            /M/UI::SystemDialogButton *m_button_next/0x4/0xc/
+            /M/UI::SystemDialogButton *m_button_2_yes/0x4/0x10/
+            /M/UI::SystemDialogButton *m_button_2_no/0x4/0x14/
+            /M/UI::MenuWaitMark *m_wait_mark/0x4/0x18/
         /END/
 
         /START_CLASS/NAME@SystemDialogState/SIZE@0x140/
@@ -123,12 +124,12 @@ BEGIN_NAMESPACE(Sequence)
         void fadeInWindow_(Sequence::Common_SystemDialog::SystemDialogState &, bool);
         void fadeOutWindow_(Sequence::Common_SystemDialog::SystemDialogState &, bool);
         void closeSystemDialog_();
-        void *createSystemDialogBody_(s32);             // UI::MenuDialogBody *
-        void *createSystemDialogButton_(s32);           // UI::SystemDialogButton *
-        void *createSystemDialogHalfBody_(s32);         // UI::MenuDialogHalfBody *
-        void *createSystemDialogWaitMark_(s32, s32);    // UI::MenuWaitMark *
-        void *createSystemDialogButton2_No_(s32);       // UI::SystemDialogButton *
-        void *createSystemDialogButton2_Yes_(s32);      // UI::SystemDialogButton *
+        UI::MenuDialogBody *createSystemDialogBody_(s32);
+        UI::SystemDialogButton *createSystemDialogButton_(s32);
+        UI::MenuDialogHalfBody *createSystemDialogHalfBody_(s32);
+        UI::MenuWaitMark *createSystemDialogWaitMark_(s32, s32);
+        UI::SystemDialogButton *createSystemDialogButton2_No_(s32);
+        UI::SystemDialogButton *createSystemDialogButton2_Yes_(s32);
         void setupSystemDialog_(s32);
         void setupSystemDialogMessage_(s32, s32, const UI::DashMessageArg *, s32, s32, s32);
         void closeSystemWindow(bool);

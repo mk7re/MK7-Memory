@@ -477,6 +477,13 @@ BEGIN_NAMESPACE(UI)
 	class MiiStrBar;
 	class MiiGroupBar;
 	class MiiCheckBar;
+	class ChartMeter;
+	class ChartDot;
+	class ChartGhost;
+	class ChartGhostSelect;
+	class MenuDialogBody;
+	class MenuDialogHalfBody;
+	class SystemDialogButton;
 }
 
 BEGIN_NAMESPACE(Util)

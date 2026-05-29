@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../common.hpp"
 #include "../types.hpp"
 #include "../forward.hpp"
 
@@ -42,7 +43,7 @@ BEGIN_NAMESPACE(Sequence)
         /M/Sequence::GhostList *m_ghost_list_ptr/0x4/0x2a0/
         /M/Sequence::GhostList m_ghost_list/0x280/0x2a4/
         /M/s32 m_max_selected_ghost_num/0x4/0x52c/
-        /M/s32 m_selected_ghosts[7]/0x1c/0x530/
+        /M/s32 m_selected_ghosts[KART_MAX - 1]/0x1c/0x530/
         /U/bool/0x1/0x54c/
         /U/u8/0x1/0x54d/
         /M/s32 m_currently_selected_ghost_idx/0x4/0x550/

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../common.hpp"
 #include "../types.hpp"
 #include "../forward.hpp"
 #include "../versions.h"
@@ -21,7 +22,7 @@ BEGIN_NAMESPACE(UI)
         /END/
 
         /START_STRUCT/NAME@MiiInfoList/SIZE@0x54/
-            /M/MiiInfoListEntry m_entries[5]/0x50/0x0/  // One per visible entry in the scroll list
+            /M/MiiInfoListEntry m_entries[NUM_SCROLL_LIST_VISIBLE_ENTRIES]/0x50/0x0/  // One per visible entry in the scroll list
             /M/s32 m_current_entry_idx/0x4/0x50/
         /END/
 

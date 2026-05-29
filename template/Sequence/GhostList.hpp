@@ -45,7 +45,7 @@ BEGIN_NAMESPACE(Sequence)
         /M/s32 m_num_staff_ghosts/0x4/0x134/
         /M/s32 m_num_ranking_ghosts/0x4/0x138/
         /M/s32 m_selected_ghost_idx/0x4/0x13c/
-        /M/s32 m_selected_ghosts[7]/0x1c/0x140/
+        /M/s32 m_selected_ghosts[KART_MAX - 1]/0x1c/0x140/
         /U/s32/0x4/0x16c/
         /U/s32/0x4/0x170/
         /M/s32 unk_0x174[GHOST_LIST_MAX - 1]/0x58/0x174/
