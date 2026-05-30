@@ -36,8 +36,6 @@ BEGIN_NAMESPACE(Sequence)
 
         /M/System::GhostLoader *m_ghost_loader/0x4/0x0/
         /M/sead::PtrArray<GhostPtr> m_ghost_ptr_array/0xC/0x4/
-        /U/GhostPtr */0x4/0x10/
-        /U/GhostPtr */0x4/0x14/
         /M/GhostPtr m_ghost_ptr_array_buffer[GHOST_LIST_MAX]/0xb8/0x18/
         /M/System::GhostLoader::GhostData *m_ghost_list[GHOST_LIST_MAX]/0x5c/0xd0/
         /M/s32 m_num_ghosts/0x4/0x12c/
@@ -45,7 +43,7 @@ BEGIN_NAMESPACE(Sequence)
         /M/s32 m_num_staff_ghosts/0x4/0x134/
         /M/s32 m_num_ranking_ghosts/0x4/0x138/
         /M/s32 m_selected_ghost_idx/0x4/0x13c/
-        /M/s32 m_selected_ghosts[7]/0x1c/0x140/
+        /M/s32 m_selected_ghosts[KART_MAX - 1]/0x1c/0x140/
         /U/s32/0x4/0x16c/
         /U/s32/0x4/0x170/
         /M/s32 unk_0x174[GHOST_LIST_MAX - 1]/0x58/0x174/

@@ -48,7 +48,7 @@ BEGIN_NAMESPACE(Sequence)
         /U/s32/0x4/0x300/
         /U/s32/0x4/0x304/
         /U/bool/0x1/0x308/
-        /U/u8/0x1/0x309/
+        /M/bool m_request_add_ai_bar/0x1/0x309/
         /M/sead::Delegate1<Menu_UpBarController, s32> m_leave_selected_delegate/0x10/0x30c/
         /M/UI::UIMenuMiiBarController *m_menu_name_group_controller/0x4/0x31c/
         /M/UI::UIMenuMiiBarController *m_menu_name_course_controller/0x4/0x320/
