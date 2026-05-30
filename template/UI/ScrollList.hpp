@@ -41,7 +41,7 @@ BEGIN_NAMESPACE(UI)
         void FUN_00145b7c();                                 // 0x00145b7c (VERSION_USA_REV1)
         void FUN_00145e34();                                 // 0x00145e34 (VERSION_USA_REV1)
         void FUN_00145f30();                                 // 0x00145f30 (VERSION_USA_REV1)
-        bool FUN_004e18f0() const;                           // 0x004e18f0 (VERSION_USA_REV1)
+        bool isNotMoving() const;                            // 0x004e18f0 (VERSION_USA_REV1)
 
         /M/ScrollListBg *m_bg/0x4/0x0/
         /M/sead::FixedPtrArray<MenuListSeparator, 6> m_separators/0x24/0x4/
