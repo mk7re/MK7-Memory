@@ -385,6 +385,7 @@ BEGIN_NAMESPACE(System)
 	class RootSystem;
 	class SaveDataManager;
 	class Scene;
+	class GfxFrmHeap;
 	class SceneManager;
 	class SystemEngine;
 	class ThreadManager;
