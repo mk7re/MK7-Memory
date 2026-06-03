@@ -65,8 +65,7 @@ BEGIN_NAMESPACE(Sequence)
         /M/RaceSys::CRaceInfo m_demo_race_info/0x190/0x204/  // Used by Demo and WinningRun
         /M/RaceSys::CRaceInfo::CKartInfo m_kart_info/0x2c/0x394/
         // The name of each player as shown in the race rank board and results screen
-        // TODO: Total size should be 0x4C * 8 = 0x160, but for some reason the size calculated is incorrect, leading to a size static assert
-        // /M/sead::WFixedSafeString<32> m_player_names[KART_MAX]/0x160/0x3c0/
+        /M/sead::WFixedSafeString<16> m_player_names[KART_MAX]/0x160/0x3c0/
         /M/ECup m_race_cup/0x1/0x620/
         /M/bool m_is_ch_gp/0x1/0x621/       // Is GP started from Mario Kart Channel (i.e. StreetPass Mii GP)
         /M/RaceSys::EGrandPrixRecord m_gp_record/0x4/0x624/
