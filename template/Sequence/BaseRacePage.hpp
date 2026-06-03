@@ -220,6 +220,7 @@ BEGIN_NAMESPACE(Sequence)
         /M/UI::RacePauseControl *m_race_pause_control/0x4/0x374/
         /M/UI::RaceNewRecordControl *m_race_new_record_control/0x4/0x378/
         /M/UI::RaceLiveControl *m_race_live_control/0x4/0x37c/
+        /M/UI::BgView *m_race_live_bg_view/0x4/0x380/
         /M/UI::BattleCountDownControl *m_battle_countdown_control/0x4/0x384/
         /M/RaceSys::ModeManagerBase *m_mode_manager/0x4/0x388/
         /M/RaceSys::ModeManagerBattle *m_mode_manager_battle/0x4/0x38c/
