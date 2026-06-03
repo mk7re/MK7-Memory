@@ -393,6 +393,8 @@ BEGIN_NAMESPACE(System)
 	class VideoDrawerThread;
 	class AppletLauncher;
 	class AppletLaunchThread;
+	class MobiClipThread;
+	class MobiClipThreadProxy;
 }
 
 BEGIN_NAMESPACE(UI)
@@ -405,6 +407,7 @@ BEGIN_NAMESPACE(UI)
 	class BgRaceMapBombControl;
 	class BgRaceMapCharaControl;
 	class BgRaceMapControl;
+	class BgView;
 	class Control;
 	class ControlAnimator;
 	class ControlInitializer;
@@ -492,6 +495,8 @@ BEGIN_NAMESPACE(UI)
 	class MenuDialogHalfBody;
 	class SystemDialogButton;
 	class GessoControl;
+	class EndingMovieView;
+	class StaffRoll;
 }
 
 BEGIN_NAMESPACE(Util)
