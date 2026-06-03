@@ -91,6 +91,7 @@ BEGIN_NAMESPACE(Field)
 	class MenuVRModel;
 	class ObjectDirector;
 	class QuadTree;
+	class ObjectBase;
 }
 
 BEGIN_NAMESPACE(Item)
@@ -176,6 +177,12 @@ BEGIN_NAMESPACE(Kart)
 BEGIN_NAMESPACE(KDGndCol)
 {
 	class Manager;
+	class CheckIF_EX;
+}
+
+BEGIN_NAMESPACE(LibEffect)
+{
+	class Particle;
 }
 
 BEGIN_NAMESPACE(Menu3D)

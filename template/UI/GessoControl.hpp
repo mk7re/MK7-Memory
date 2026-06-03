@@ -40,6 +40,6 @@ BEGIN_NAMESPACE(UI)
         /M/s32 m_wait/0x4/0x88/
         /M/f32 m_speed/0x4/0x8c/
         /M/f32 m_color_element/0x4/0x90/    // Transparency?
-        /M/sead::Vector2f m_scale/0x8/0x8c/
+        /M/sead::Vector2f m_scale/0x8/0x94/
     /END/
 }
