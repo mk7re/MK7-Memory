@@ -91,4 +91,11 @@ BEGIN_NAMESPACE(Sequence)
     /END/
 
     Utility::Random *GetRandom();
+    void Gesso_Scale();
+    void Gesso_SetWait(s32);
+    void Gesso_Visible(bool);
+    void Gesso_AccSpeed(f32);
+    void Gesso_SetSpeed(f32);
+    bool Gesso_IsAnimFinish();
+    void Gesso_In();
 }

@@ -484,6 +484,7 @@ BEGIN_NAMESPACE(UI)
 	class MenuDialogBody;
 	class MenuDialogHalfBody;
 	class SystemDialogButton;
+	class GessoControl;
 }
 
 BEGIN_NAMESPACE(Util)

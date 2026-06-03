@@ -213,6 +213,7 @@ BEGIN_NAMESPACE(Sequence)
         /M/UI::ResultBg *m_result_bg/0x4/0x320/
         /M/PauseButtons m_pause_buttons/0x18/0x324/
         /M/NextButtons m_next_buttons/0x14/0x33c/
+        /M/UI::GessoControl *m_gesso_control/0x4/0x354/
         /M/UI::RaceNoTextControl *m_race_no_text_control/0x4/0x368/
         /M/UI::RaceTextControl *m_race_text_control/0x4/0x36c/
         /M/UI::RaceTimeupControl *m_race_timeup_control/0x4/0x370/
