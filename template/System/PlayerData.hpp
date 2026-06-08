@@ -5,14 +5,16 @@
 #include "PlayerDataNoMii.hpp"
 
 #include <3ds/services/act.h>
+#include <prim/seadSafeString.hpp>
 
 BEGIN_NAMESPACE(System)
 {
-    class PlayerData : public PlayerDataNoMii
-    {
+    /START_CLASS/NAME@PlayerData/SIZE@0xA0/BASE@PlayerDataNoMii/BSIZE@0x3C/
     public:
-        CFLStoreData m_store_data;
-        bool m_loaded;
-    };
-    static_assert(sizeof(PlayerData) == 0xA0);
+        PlayerData();
+        sead::BufferedSafeString getName() const;
+
+        /M/CFLStoreData m_store_data/0x60/0x3C/
+        /M/bool m_loaded/0x1/0x9C/
+    /END/
 }

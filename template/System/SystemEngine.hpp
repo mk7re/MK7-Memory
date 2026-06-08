@@ -20,4 +20,6 @@ BEGIN_NAMESPACE(System)
         /M/BackgroundThread *m_background_thread/0x4/0x58/
         /M/BackgroundLoadThread *m_background_load_thread/0x4/0x5C/
     /END/
+
+    void getMyPlayerData(PlayerData *, bool);
 }
