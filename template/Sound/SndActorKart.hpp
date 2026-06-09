@@ -16,6 +16,7 @@ BEGIN_NAMESPACE(Sound)
         /M/s8 m_horn_timer/0x1/0x181/
         /M/s8 m_horn_counter/0x1/0x182/
         /M/Sound::SndHandle m_0x1c4/0x4/0x1c4/
+        /M/Sound::SndHandle m_driver_voice_snd_handle/0x4/0x1dc/
         /M/Kart::Vehicle* m_vehicle/0x4/0x1E0/
         /M/s32 m_player_id/0x4/0x1E4/
         /U/bool/0x1/0x1F1/

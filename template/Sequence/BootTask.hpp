@@ -4,8 +4,8 @@
 
 #include "LastingTask.hpp"
 #include "../System/SaveDataManager.hpp"
+#include "../CFL/cfl.hpp"
 
-#include <3ds/services/act.h>
 #include <prim/seadSafeString.hpp>
 
 BEGIN_NAMESPACE(Sequence)

@@ -348,6 +348,7 @@ BEGIN_NAMESPACE(Sound)
 	class SndSceneThankyou;
 	class SndSceneTrophy;
 	class SndSysSe;
+	class SndRndID;
 }
 
 BEGIN_NAMESPACE(System)

@@ -2,7 +2,7 @@
 
 #include "../types.hpp"
 
-#include <3ds/services/act.h>
+#include "../CFL/cfl.hpp"
 
 // Credits to libctru for these struct definitions
 

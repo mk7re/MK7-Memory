@@ -19,7 +19,7 @@ BEGIN_NAMESPACE(System)
         /M/AppletLaunchThread *m_applet_launch_thread/0x4/0x54/
         /M/BackgroundThread *m_background_thread/0x4/0x58/
         /M/BackgroundLoadThread *m_background_load_thread/0x4/0x5C/
-    /END/
 
-    void getMyPlayerData(PlayerData *, bool);
+        void getMyPlayerData(PlayerData *, bool);
+    /END/
 }
