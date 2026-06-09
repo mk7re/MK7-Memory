@@ -94,6 +94,9 @@ BEGIN_NAMESPACE(Kart)
 			NO_DASH
 		};
 
+		void setPartsDriveParam(const PartsDriveParamSet &);
+		void updatePartsDriveParam(const PartsDriveParamSet &);
+
 		/M/BoostFlags m_boost_flags/0x4/0xC28/
 		/M/BoostFlags m_boost_flags_previous_frame/0x4/0xC2C/
 		/M/StatusFlags m_status_flags/0x4/0xC30/

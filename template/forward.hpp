@@ -164,6 +164,7 @@ BEGIN_NAMESPACE(Kart)
 	class KartPartsCustomedParam;
 	struct NetData;
 	class PartsDriveParam;
+	class PartsDriveParamSet;
 	class ReplayInfo;
 	class Rigid;
 	class Unit;
