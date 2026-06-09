@@ -1,6 +1,11 @@
 #pragma once
 
+#include "../forward.hpp"
 #include "../types.hpp"
+
+#include "../Utility/Random.hpp"
+
+#include <sound/seadSoundHandle.hpp>
 
 BEGIN_NAMESPACE(Sound)
 {
@@ -24,5 +29,34 @@ BEGIN_NAMESPACE(Sound)
             SE_SYS_FRIEND_BTN_TURN_OFF = 0x77,
             SE_SYS_DECIDE_M_8A = 0x8A
         };
+
+        enum class ETitleCallType : s32
+        {
+            DEFAULT_TITLE,
+            MARIO_GLIDER,
+            MARIO_UNDERWATER,
+            PEACH,
+            DK,
+            YOSHI
+        };
+
+        SndSeEvent();
+        void initialize();
+        void initScene();
+        void playTitleCall();
+        void stopTitleCall();
+        void setTitleCallType(s32);
+        void playReadyToGoVoice(s32);
+        void playCharaDecideVoice(s32);
+        void playCharaPresentVoice(s32);
+        void exec(EEvent, s32);
+
+        /M/bool m_enable_se/0x1/0x0/
+        /M/Utility::Random m_random/0x18/0x4/
+        /M/SndEngine *m_snd_engine/0x4/0x1c/
+        /M/ETitleCallType m_title_call_type/0x4/0x20/
+        /M/bool m_title_call_played/0x1/0x24/
+        /M/bool m_alt_title_screen_unlocked/0x1/0x25/
+        /M/sead::SoundHandle *m_snd_handle/0x4/0x28/
     /END/
 }

@@ -5,7 +5,7 @@
 BEGIN_NAMESPACE(Sound)
 {
     // NOTE: Name is made up
-    enum ESoundID: u32 {
+    enum ESoundID: s32 {
         STRM_TITLE = 0x01000000,
         STRM_STAFF_ROLL = 0x01000001,
         STRM_MENU_SINGLE_MULTI = 0x01000002,
