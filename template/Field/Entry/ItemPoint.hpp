@@ -10,6 +10,9 @@ BEGIN_NAMESPACE(Field)
 {
     /START_STRUCT/NAME@MapdataItemPointData/SIZE@0x14/
         /M/sead::Vector3f position/0xC/0x0/
+        /M/float radius/0x4/0xC/ // units = radius * 50.f
+        /M/u16 fly_mode/0x2/0x10/
+        /M/u16 scan_radius/0x2/0x12/ // 0 -> 300 units, 1 -> 900 units
     /END/
 
     /START_CLASS/NAME@MapdataItemPoint/SIZE@0x2C/BASE@MapdataDataBase<MapdataItemPointData>/BSIZE@0x4/
