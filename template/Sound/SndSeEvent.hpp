@@ -60,6 +60,6 @@ BEGIN_NAMESPACE(Sound)
         /M/ETitleCallType m_title_call_type/0x4/0x20/
         /M/bool m_title_call_played/0x1/0x24/
         /M/bool m_alt_title_screen_unlocked/0x1/0x25/
-        /M/sead::SoundHandle *m_snd_handle/0x4/0x28/
+        /M/SndHandle *m_snd_handle/0x4/0x28/
     /END/
 }

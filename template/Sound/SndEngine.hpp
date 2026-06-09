@@ -25,7 +25,7 @@ BEGIN_NAMESPACE(Sound)
 
         void sceneEnter(System::SceneID);
         void startSound(SndHandle *, u32, void * /* nw::snd::SoundStartable::StartInfo* */);
-        void startSysSe(u32);
+        SndHandle *startSysSe(u32);
         void stopTitleBgm();
         SndSysSe *getSceneSysSe();
         bool isScenePaused();
