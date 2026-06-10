@@ -17,9 +17,10 @@ BEGIN_NAMESPACE(Sequence)
 {
     /START_CLASS/NAME@MenuData/SIZE@0x978/
     public:
-        enum EndingType {
-            ENDING_NORMAL,
-            ENDING_TRUE
+        enum class EndingType : u8 {
+            NO_CREDITS,
+            CREDITS_NORMAL,
+            CREDITS_TRUE
         };
 
         // NOTE: guessed name
@@ -59,13 +60,12 @@ BEGIN_NAMESPACE(Sequence)
         /M/s32 m_fade_frames_bottom_screen/0x4/0x6c/
         /M/u8 m_current_title_demo_mode/0x1/0x70/
         /M/bool m_request_save/0x1/0x71/
-        /M/u8 m_ending_type/0x1/0x72/                        // See the `EndingType` enum
+        /M/EndingType m_ending_type/0x1/0x72/
         /M/RaceSys::CRaceInfo m_race_info/0x190/0x74/
         /M/RaceSys::CRaceInfo m_demo_race_info/0x190/0x204/  // Used by Demo and WinningRun
         /M/RaceSys::CRaceInfo::CKartInfo m_kart_info/0x2c/0x394/
         // The name of each player as shown in the race rank board and results screen
-        // TODO: Total size should be 0x4C * 8 = 0x160, but for some reason the size calculated is incorrect, leading to a size static assert
-        // /M/sead::WFixedSafeString<32> m_player_names/0x160/0x3c0/
+        /M/sead::WFixedSafeString<16> m_player_names[KART_MAX]/0x160/0x3c0/
         /M/ECup m_race_cup/0x1/0x620/
         /M/bool m_is_ch_gp/0x1/0x621/       // Is GP started from Mario Kart Channel (i.e. StreetPass Mii GP)
         /M/RaceSys::EGrandPrixRecord m_gp_record/0x4/0x624/
@@ -90,4 +90,11 @@ BEGIN_NAMESPACE(Sequence)
     /END/
 
     Utility::Random *GetRandom();
+    void Gesso_Scale();
+    void Gesso_SetWait(s32);
+    void Gesso_Visible(bool);
+    void Gesso_AccSpeed(f32);
+    void Gesso_SetSpeed(f32);
+    bool Gesso_IsAnimFinish();
+    void Gesso_In();
 }

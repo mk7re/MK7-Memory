@@ -91,6 +91,7 @@ BEGIN_NAMESPACE(Field)
 	class MenuVRModel;
 	class ObjectDirector;
 	class QuadTree;
+	class ObjectBase;
 }
 
 BEGIN_NAMESPACE(Item)
@@ -145,6 +146,8 @@ BEGIN_NAMESPACE(Jugem)
 BEGIN_NAMESPACE(Kart)
 {
 	class KartConstructInfoAccessor;
+	class KartConstructInfoData;
+	class RawKartConstructInfoBin;
 	class DriverCallback;
 	class DriverHop;
 	class GhostVisible;
@@ -161,6 +164,7 @@ BEGIN_NAMESPACE(Kart)
 	class KartPartsCustomedParam;
 	struct NetData;
 	class PartsDriveParam;
+	class PartsDriveParamSet;
 	class ReplayInfo;
 	class Rigid;
 	class Unit;
@@ -176,6 +180,12 @@ BEGIN_NAMESPACE(Kart)
 BEGIN_NAMESPACE(KDGndCol)
 {
 	class Manager;
+	class CheckIF_EX;
+}
+
+BEGIN_NAMESPACE(LibEffect)
+{
+	class Particle;
 }
 
 BEGIN_NAMESPACE(Menu3D)
@@ -339,6 +349,7 @@ BEGIN_NAMESPACE(Sound)
 	class SndSceneThankyou;
 	class SndSceneTrophy;
 	class SndSysSe;
+	class SndRndID;
 }
 
 BEGIN_NAMESPACE(System)
@@ -378,6 +389,7 @@ BEGIN_NAMESPACE(System)
 	class RootSystem;
 	class SaveDataManager;
 	class Scene;
+	class GfxFrmHeap;
 	class SceneManager;
 	class SystemEngine;
 	class ThreadManager;
@@ -386,6 +398,8 @@ BEGIN_NAMESPACE(System)
 	class VideoDrawerThread;
 	class AppletLauncher;
 	class AppletLaunchThread;
+	class MobiClipThread;
+	class MobiClipThreadProxy;
 }
 
 BEGIN_NAMESPACE(UI)
@@ -398,6 +412,7 @@ BEGIN_NAMESPACE(UI)
 	class BgRaceMapBombControl;
 	class BgRaceMapCharaControl;
 	class BgRaceMapControl;
+	class BgView;
 	class Control;
 	class ControlAnimator;
 	class ControlInitializer;
@@ -484,6 +499,9 @@ BEGIN_NAMESPACE(UI)
 	class MenuDialogBody;
 	class MenuDialogHalfBody;
 	class SystemDialogButton;
+	class GessoControl;
+	class EndingMovieView;
+	class StaffRoll;
 }
 
 BEGIN_NAMESPACE(Util)

@@ -157,7 +157,7 @@ BEGIN_NAMESPACE(Item)
         /M/bool m_is_collisionless/0x1/0x1AD/
         /M/bool m_is_dropped/0x1/0x1AE/
         /M/bool m_is_awaiting_delete/0x1/0x1AF/
-        /U/bool/0x1/0x1B0/ // related to drop?
+        /M/bool m_is_dropped_disable_logrecord/0x1/0x1B0/ // Always set along m_is_dropped, disables logging the InitSelfMove event (LogRecorder::addValue)
         /M/f32 m_water_box/0x4/0x1B4/
         /U/void */0x4/0x1B8/ // Field::ObjectWaterBox?
         /M/f32 m_moon_box/0x4/0x1BC/

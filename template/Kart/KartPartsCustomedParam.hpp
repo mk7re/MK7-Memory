@@ -11,6 +11,12 @@ BEGIN_NAMESPACE(Kart)
 {
     /START_CLASS/NAME@KartPartsCustomedParam/SIZE@0x1CC/
     public:
+        KartPartsCustomedParam();
+        void convert_Result();
+        void calc_ShaftWheel();
+        void updateParam_forKart(RaceSys::EDriverID, RaceSys::EBodyID, RaceSys::ETireID, RaceSys::EWingID);
+        void calc_All();
+
         /M/KartConstructInfoAccessor *m_construct_info_accessor/0x4/0x0/
         /M/KartPartsConstructParam m_construct_param/0x14/0x4/
         /M/sead::Vector3f unk_0x18[2]/0x18/0x18/

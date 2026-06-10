@@ -48,5 +48,6 @@ BEGIN_NAMESPACE(RaceSys)
         Gctr_WinningRun,        // Toad Circuit (Grand Prix winning cutscene)
         _39,
         MAX,
+        INVALID,
     };
 }

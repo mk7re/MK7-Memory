@@ -4,7 +4,7 @@
 
 BEGIN_NAMESPACE(RaceSys)
 {
-    enum class EDriverID : u32
+    enum class EDriverID : s32
     {
         Bowser,
         Daisy,

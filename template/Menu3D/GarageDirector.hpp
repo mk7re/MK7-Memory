@@ -3,6 +3,7 @@
 #include "../forward.hpp"
 #include "../types.hpp"
 
+#include "../CFL/cfl.hpp"
 #include "../Object/TDirectorList.hpp"
 #include "../Object/TLinkSocket.hpp"
 #include "../RaceSys/EDriverID.hpp"
@@ -14,7 +15,6 @@
 #include "EScene.hpp"
 #include "EState.hpp"
 
-#include <3ds/services/act.h>
 #include <prim/seadDelegate.h>
 #include <math/seadMatrix.h>
 
