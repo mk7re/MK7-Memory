@@ -1,3 +1,5 @@
+#pragma once
+
 #include "../types.hpp"
 #include "EArchiveID.hpp"
 // #include "resource/seadSharcArchiveRes.h"

@@ -1,4 +1,4 @@
-
+#pragma once
 
 #include "../types.hpp"
 #include <container/seadBuffer.h>
