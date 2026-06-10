@@ -9,7 +9,7 @@
 #include "MessageString.hpp"
 
 #include <math/seadVector.hpp>
-#include <prim/seadRuntimeTypeInfo.h>
+//#include <prim/seadRuntimeTypeInfo.h>
 #include <prim/seadSafeString.h>
 #include <container/seadPtrArray.h>
 #include <math/seadMatrix.h>
@@ -57,7 +57,8 @@ BEGIN_NAMESPACE(UI)
                 ElementHandle();
             /END/
             
-            SEAD_RTTI_BASE(ControlSight)
+            virtual void* getRuntimeTypeInfo(); // 0
+            //SEAD_RTTI_BASE(ControlSight)
 
             virtual void _0x4(); // 1 (__sub_object)
             virtual void _0x8() = 0; // 2 (__deallocating)
@@ -108,7 +109,8 @@ BEGIN_NAMESPACE(UI)
 
     /START_CLASS/NAME@NullControlSight/SIZE@0x40/BASE@ControlSight/BSIZE@0x4/VTABLE@True/
     public:
-        SEAD_RTTI_OVERRIDE(NullControlSight, ControlSight)
+        virtual void* getRuntimeTypeInfo(); // 0
+        //SEAD_RTTI_OVERRIDE(NullControlSight, ControlSight)
 
         virtual s32 build(const CreateArg*); // 3
         virtual void calc(); // 4
