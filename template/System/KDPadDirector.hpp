@@ -3,7 +3,7 @@
 #include "../forward.hpp"
 #include "../types.hpp"
 
-#include "../Object/TDirectorList.hpp"
+#include "../Object/TDirectorArray.hpp"
 #include "../Object/TLinkSocket.hpp"
 #include "KDPad.hpp"
 #include "KDPadPlayer.hpp"
