@@ -13,6 +13,7 @@ BEGIN_NAMESPACE(Sequence)
     public:
         // NOTE: Name is made up
         /START_CLASS/NAME@GhostListHolder/SIZE@0x1280/
+        public:
             /M/System::GhostLoader m_ghost_loader/0x127c/0x0/
             /M/bool m_is_ready_to_load_ghost_list/0x1/0x127c/
         /END/
