@@ -60,6 +60,14 @@ BEGIN_NAMESPACE(UI)
 		};
 		static_assert(sizeof(ControlAnimationTypeFlags) == 0x4);
 
+        // NOTE: Name is made up
+        enum class ECompleteNextMode : u32 {
+            MODE_NONE = -1,
+            MODE_OPEN_MENU = -2,      // Calls the page's `procOpenMenu` function
+            MODE_CLOSE_MENU = -3,     // Calls the page's `procCloseMenu` function
+            MODE_M4 = -4
+        };
+
         /START_STRUCT/NAME@AnimationDefine_Dummy/SIZE@0x18/BASE@ControlAnimator::AnimationDefine/BSIZE@0x18/VTABLE@True/
             void defineAnimation(); // 0
         /END/
@@ -197,8 +205,12 @@ BEGIN_NAMESPACE(UI)
         // The return code enum (associated to the attached page,
         // and the page's convertReturnCode function) the game will traverse
         // after pressing / touching the button
+        // If set to -1, the button won't be interactable (see `UI::BaseMenuButtonControl::canManipulate`)
         /M/s32 m_return_code/0x4/0x230/
-        /M/s32 m_0x234/0x4/0x234/
+        // A state variable that changes the "exit" behaviour
+        // after pressing the button (i.e. when `UI::BaseMenuButtonControl::completeNext` is executed)
+        // See the `ECompleteNextMode` enum
+        /M/s32 m_on_complete_next_mode/0x4/0x234/
         /M/s32 m_sync_return_code/0x4/0x238/
     /END/
 }
