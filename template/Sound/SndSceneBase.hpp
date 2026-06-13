@@ -5,8 +5,8 @@
 
 #include "../Object/ArgumentObj.hpp"
 
-BEGIN_NAMESPACE(Sound){
-
+BEGIN_NAMESPACE(Sound)
+{
     // TODO: Inherits from TDirectorBase
     /START_CLASS/NAME@SndSceneBase/SIZE@0x40/VTABLE@True/
     public:

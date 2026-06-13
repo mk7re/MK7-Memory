@@ -4,7 +4,7 @@
 
 #include "BasePage.hpp"
 #include "ControlSlider.hpp"
-#include "MenuPageID.hpp"
+#include "../Sound/EMenuPage.hpp"
 #include "../RaceSys/EDriverID.hpp"
 
 #include <container/seadPtrArray.h>
@@ -72,6 +72,6 @@ BEGIN_NAMESPACE(Sequence)
         /M/ControlDisplayFlags m_control_display_flags/0x1/0x284/
         /M/s32 m_wifi_course_vote_timer/0x4/0x288/
         /M/BaseMenuPageFlags m_flags/0x1/0x28c/
-        /M/MenuPageID m_id/0x4/0x290/
+        /M/Sound::EMenuPage m_id/0x4/0x290/
     /END/
 }

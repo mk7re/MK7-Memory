@@ -35,10 +35,12 @@ BEGIN_NAMESPACE(UI)
 
         /M/EType m_type/0x1/0x0/
         /M/sead::Delegate1R<CursorMove, CursorItem *, s32> m_on_next_delegate/0x10/0x4/
-        /M/s32 m_0x14/0x4/0x14/
-        /M/s32 m_0x18/0x4/0x18/
-        /M/u8 m_0x1c/0x1/0x1c/
-        /M/bool m_0x1d/0x1/0x1d/
-        /M/s32 m_0x20/0x4/0x20/
+        /M/s32 m_num_rows/0x4/0x14/
+        /M/s32 m_num_columns/0x4/0x18/
+        /U/u8/0x1/0x1c/
+        // If `true`, the cursor will roll over when attempting to select prior to the first option,
+        // or after the last option
+        /M/bool m_roll_over/0x1/0x1d/
+        /U/s32/0x4/0x20/
     /END/
 }

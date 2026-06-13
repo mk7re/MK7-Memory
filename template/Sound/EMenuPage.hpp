@@ -3,10 +3,9 @@
 #include "../types.hpp"
 #include "../versions.h"
 
-BEGIN_NAMESPACE(Sequence)
+BEGIN_NAMESPACE(Sound)
 {
-    // Unknown name
-    enum class MenuPageID : u32
+    enum class EMenuPage : s32
     {
         MenuTitle = 1,
 #if GAME_VERSION == ALL_KIOSK
