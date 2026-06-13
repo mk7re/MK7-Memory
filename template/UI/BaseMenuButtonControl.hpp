@@ -61,7 +61,7 @@ BEGIN_NAMESPACE(UI)
 		static_assert(sizeof(ControlAnimationTypeFlags) == 0x4);
 
         // NOTE: Name is made up
-        enum class ECompleteNextMode : u32 {
+        enum class ECompleteNextMode : s32 {
             MODE_NONE = -1,
             MODE_OPEN_MENU = -2,      // Calls the page's `procOpenMenu` function
             MODE_CLOSE_MENU = -3,     // Calls the page's `procCloseMenu` function
