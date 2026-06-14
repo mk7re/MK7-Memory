@@ -223,20 +223,28 @@ BEGIN_NAMESPACE(miisel)
 
 BEGIN_NAMESPACE(Net)
 {
+	class EventLogger;
 	class NetworkBuffer;
 	class NetworkBufferController;
 	class NetworkEngine;
 	class NetworkErrorHandler;
 	class NetworkEventModule;
 	class NetworkFriendsManager;
+	class NetworkGameEventMgr;
 	class NetworkGameMgr;
+	class NetworkGhostUploadManager;
 	class NetworkItemEventDataMgr;
+	class NetworkItemEventMgr;
+	class NetworkMiiManager;
 	class NetworkPlayerData;
 	class NetworkPlayerDataManager;
 	class NetworkReceivedInfo;
 	class NetworkSelectMenuProcess;
 	class NetworkSystemInfo;
+	class NetworkSystemInfoManager;
 	class NetworkStationBufferManager;
+	class NetworkSupplyInfoManager;
+	class NetworkWbtMgr;
 }
 
 BEGIN_NAMESPACE(Object)
