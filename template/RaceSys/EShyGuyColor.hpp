@@ -1,6 +1,9 @@
 #pragma once
 
 #include "../types.hpp"
+#include "EDriverID.hpp"
+
+#include <prim/seadSafeString.h>
 
 BEGIN_NAMESPACE(RaceSys)
 {
@@ -16,4 +19,6 @@ BEGIN_NAMESPACE(RaceSys)
         White,
         MAX,
     };
+
+    sead::SafeString GetShyGuyColorString(EDriverID, EShyGuyColor);
 }
