@@ -190,8 +190,10 @@ BEGIN_NAMESPACE(UI)
         /M/sead::Delegate2<BaseMenuButtonControl, s32, sead::Vector2f const &> m_touch_handler_up/0x10/0x1e0/
         /M/sead::Delegate2<BaseMenuButtonControl, s32, sead::Vector2f const &> m_touch_handler_on/0x10/0x1f0/
         /M/sead::Delegate2<BaseMenuButtonControl, s32, sead::Vector2f const &> m_touch_handler_off/0x10/0x200/
+        // Passed as an argument to `buttonHandler_OK`
         /M/s32 m_selected_option_idx/0x4/0x210/
-        /M/s32 m_0x214/0x4/0x214/
+        // Passed as an argument to `buttonHandler_SelectOn`
+        /M/s32 m_highlighted_option_idx/0x4/0x214/
         /M/MenuCaption *m_caption/0x4/0x218/
         /M/s32 m_caption_message_id/0x4/0x21c/
         /M/bool m_0x220/0x1/0x220/
