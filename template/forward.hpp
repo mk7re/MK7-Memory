@@ -25,6 +25,11 @@ BEGIN_NAMESPACE(Demo)
 	class DemoCameraDirector;
 }
 
+BEGIN_NAMESPACE(Debug)
+{
+	class ConfigLoader;
+}
+
 BEGIN_NAMESPACE(Effect)
 {
 	class EffectEngine;
@@ -380,6 +385,7 @@ BEGIN_NAMESPACE(System)
 	class KDAIPad;
 	class KDPad;
 	class KDPadAddBase;
+	class KDPadController;
 	class KDPadControllerCore;
 	class KDPadDirector;
 	class KDPadInputer;

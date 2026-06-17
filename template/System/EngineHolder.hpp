@@ -2,7 +2,9 @@
 
 #include "../types.hpp"
 #include "../forward.hpp"
+#include "../versions.h"
 
+#include "../Object/ActorEngine.hpp"
 #include "../Object/EEngineType.hpp"
 
 #include <utility>
@@ -47,6 +49,11 @@ BEGIN_NAMESPACE(System)
             auto const &engine_info = m_engine_manager.get_engine_info(type);
             return engine_info.exists ? reinterpret_cast<t *>(reinterpret_cast<decltype(ENGINE_KEY)>(engine_info.engine) ^ ENGINE_KEY) : nullptr;
         }
+
+        void setEngine(Object::ActorEngine *, Object::EEngineType, const Priority &);
+#if GAME_VERSION == VERSION_E3_2010
+        ActorEngine *getEngine(Object::EEngineType);
+#endif
 
         EngineManager m_engine_manager;
         // It's not clear if this gap is here or in RootScene.
