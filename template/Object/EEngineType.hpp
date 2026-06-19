@@ -15,7 +15,7 @@ BEGIN_NAMESPACE(Object)
 #if GAME_VERSION == VERSION_E3_2010
         _5,
         Sound,
-        Debug
+        Debug,
 #else
         Mii,
         Sound,

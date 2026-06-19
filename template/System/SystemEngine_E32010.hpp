@@ -12,7 +12,7 @@ BEGIN_NAMESPACE(System)
 #if GAME_VERSION == VERSION_E3_2010
     /START_CLASS/NAME@SystemEngine/SIZE@0x5C/
     public:
-        /M/KDPadController *m_pad/0x4/0x30/
+        /M/KDPadController *m_pad_controller/0x4/0x30/
         /M/Debug::ConfigLoader *m_config_loader/0x4/0x40/
 
         // 0x001ebab4
