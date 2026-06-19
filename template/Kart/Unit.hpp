@@ -35,6 +35,7 @@ BEGIN_NAMESPACE(Kart)
 		/M/Driver *m_driver/0x4/0x50/
 		/M/DispBody *m_disp_body/0x4/0x54/
 		/M/DispWing *m_disp_wing/0x4/0x1E8/
+		/M/Render::DrawMdl *m_kart_shadow/0x4/0x1F4/
 		/M/DispKiller *m_disp_killer/0x4/0x204/
 		/M/Camera *m_camera/0x4/0x214/
 	/END/
