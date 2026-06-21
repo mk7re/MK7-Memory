@@ -97,6 +97,8 @@ BEGIN_NAMESPACE(Field)
 	class ObjectDirector;
 	class QuadTree;
 	class ObjectBase;
+	class ObjectPathBase;
+	class ObjectCollisionBase;
 }
 
 BEGIN_NAMESPACE(Item)
