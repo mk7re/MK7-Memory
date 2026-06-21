@@ -81,6 +81,7 @@ BEGIN_NAMESPACE(Field)
 	class MapdataCourseAccessor;
 	class MapdataEnemyPathAccessor;
 	class MapdataEnemyPointAccessor;
+	class MapdataGeoObj;
 	class MapdataGeoObjAccessor;
 	class MapdataGlidePointAccessor;
 	class MapdataGlidePathAccessor;
