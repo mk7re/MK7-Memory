@@ -13,7 +13,7 @@ BEGIN_NAMESPACE(System)
     /START_CLASS/NAME@GameSetting/SIZE@0x1050/
     public:
         /START_STRUCT/NAME@Location/SIZE@0x8/
-            /U/u8/0x1/0x2/
+            /U/u8/0x1/0x2/  // Always 2?
             /M/nn::cfg::CTR::CfgCountryCode m_country/0x1/0x3/
             /M/s16 m_latitude/0x2/0x4/
             /M/s16 m_longitude/0x2/0x6/
@@ -36,6 +36,15 @@ BEGIN_NAMESPACE(System)
 
         inline u8 getRegionId() {
             return static_cast<u8>(m_simple_address.id >> 0x10);
+        }
+
+        inline void setRegionId(u8 region) {
+            u32 id = m_simple_address.id;
+
+            id &= 0xFF00FFFFu;
+            id |= (static_cast<u32>(region) << 0x10);
+
+            m_simple_address.id = id;
         }
 
         // 0x0057f1e0 (VERSION_EUR_DLP)
