@@ -25,8 +25,8 @@ BEGIN_NAMESPACE(Sequence)
         /M/RaceSys::ECourseID m_cec_gp_courses[NUM_COURSES_PER_CUP]/0x10/0x260/
     /END/
 
-    extern RaceSys::ECourseID RaceCourseIds[NUM_CUPS][NUM_COURSES_PER_CUP];
-    extern RaceSys::ECourseID BattleCourseIds[NUM_BATTLE_COURSES];
+    extern RaceSys::ECourseID RaceCourseIds[NUM_CUPS][NUM_COURSES_PER_CUP];     // 0x00611ca0 (VERSION_EUR_DLP)
+    extern RaceSys::ECourseID BattleCourseIds[NUM_BATTLE_COURSES];              // 0x00611d20 (VERSION_EUR_DLP)
 
     bool IsCecGP();
     const sead::WSafeString &GetCecGPName();
