@@ -18,6 +18,7 @@ BEGIN_NAMESPACE(Render)
             /M/UIDrawDirector *m_ui_draw_director/0x4/0x20/
             /M/void *m_fog_manager/0x4/0x28/
             /M/Effect::ParticleDrawer *m_particle_drawer/0x4/0x30/
+            /M/VRAMHeapMgr *m_vram_heap_mgr/0x4/0x38/
             /M/void *m_depth_buffer_reader/0x4/0x40/
         /END/
 

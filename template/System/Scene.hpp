@@ -19,7 +19,8 @@ BEGIN_NAMESPACE(System)
             EXIT
         };
 
-        enum SceneFlags : u32 {
+        enum SceneAttribute : u32 {
+            SCENE = 0,
             ROOT_SCENE = 1,
             GAME_SCENE = 2
         };
@@ -44,7 +45,7 @@ BEGIN_NAMESPACE(System)
         /M/bool m_is_exiting_scene/0x1/0x1c1/
         /M/Scene *m_previous_scene/0x4/0x1c4/
         /M/SceneState m_state/0x1/0x1d0/
-        /M/u32 m_scene_flags/0x4/0x1d4/     // See the `SceneFlags` enum
+        /M/u32 m_attribute/0x4/0x1d4/     // See the `SceneAttribute` enum
         /M/SceneID m_scene_id/0x1/0x1d8/
         /M/u32 m_game_scene_calc_time/0x4/0x1dc/
     /END/

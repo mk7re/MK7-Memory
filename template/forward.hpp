@@ -293,12 +293,15 @@ BEGIN_NAMESPACE(Render)
 	}
 
 	class DrawMdl;
+	struct DrawMdlCreateArgs;
 	class LightSet;
 	class RenderEngine;
 	class ShadowVolume;
 	class UIDrawDirector;
 	class UIDrawDirectorFast;
 	class UIDrawDirectorProxy;
+	class VRAMHeapMgr;
+	class VRAMCollection;
 }
 
 BEGIN_NAMESPACE(Sequence)
@@ -417,6 +420,7 @@ BEGIN_NAMESPACE(System)
 	class AppletLaunchThread;
 	class MobiClipThread;
 	class MobiClipThreadProxy;
+	class NWAllocator;
 }
 
 BEGIN_NAMESPACE(UI)
