@@ -48,7 +48,7 @@ BEGIN_NAMESPACE(Kart)
 
         void replaceTexture(void * /* nw::gfx::res::ResGraphicsFile */, s32, sead::Heap *);
         bool HasGhostMaterial(void * /* nw::gfx::res::ResModel */);
-        void *GetGhostResGraphicsFile();
+        static void *GetGhostResGraphicsFile();
         void create(const CreateArgs &);
 
         /M/Render::DrawMdl *m_model/0x4/0x0/
