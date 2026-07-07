@@ -9,6 +9,15 @@
 BEGIN_NAMESPACE(Render)
 {
     /START_STRUCT/NAME@DrawMdlCreateArgs/SIZE@0x124/
+        // These values are correlated with the `nw::gfx::Model::BufferOption` enum
+        enum EModelBufferOption : u32 {
+            FLAG_BUFFER_TEXTURE_MAPPER = 0x0001,
+            FLAG_BUFFER_TEXTURE_COORDINATOR = 0x0002,
+            FLAG_BUFFER_SCENE_ENVIRONMENT = 0x0004,
+            FLAG_BUFFER_MATERIAL_COLOR = 0x0008,
+            FLAG_BUFFER_FRAGMENT_OPERATION = 0x0010,
+        };
+
         DrawMdlCreateArgs();
         void SetLoadInfo(const sead::SafeString &, s32, bool);
         void SetPathInfoNoLoad(const sead::SafeString &);
@@ -20,10 +29,12 @@ BEGIN_NAMESPACE(Render)
         /M/bool m_load_resource_direct/0x1/0x8d/
         /M/void *m_res_graphics_file/0x4/0x90/  // nw::gfx::res::ResGraphicsFile
         /M/void *m_res_model/0x4/0x94/          // nw::gfx::res::ResModel
-        /U/s32/0x4/0x98/
-        /M/sead::FixedSafeString<64> m_alt_resource_path/0x4c/0x9c/
+        // If the .bcmdl has many CMDL entries, then this corresponds to the index of the specific CMDL
+        // we want to load
+        /M/s32 m_res_model_idx/0x4/0x98/
+        /M/sead::FixedSafeString<64> m_model_name/0x4c/0x9c/
         /U/s32/0x4/0xe8/
-        /M/s32 m_flags/0x4/0xec/
+        /M/u32 m_model_buffer_option/0x4/0xec/  // See the `EModelBufferOption` enum
         /U/s32/0x4/0xf0/
         /M/void *m_model/0x4/0xf4/              // nw::gfx::Model *
         /M/s32 m_material_anim_idx/0x4/0xf8/

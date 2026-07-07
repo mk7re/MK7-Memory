@@ -264,6 +264,8 @@ BEGIN_NAMESPACE(Object)
     class ActorVisitor;
 	class BattleObjectMgrBase;
 	class CharacterEngine;
+	class Coin;
+	class CoinManager;
 	class DTIClassInfo;
 	class Trophy3DModelManager;
 }
