@@ -4,6 +4,23 @@
 
 BEGIN_GLOBAL_NAMESPACE
 
+enum class CFLFavoriteColor : u32 {
+    RED,
+    ORANGE,
+    YELLOW,
+    YELLOW_GREEN,
+    GREEN,
+    BLUE,
+    SKY_BLUE,
+    PINK,
+    PURPLE,
+    BROWN,
+    WHITE,
+    BLACK,
+
+    MAX
+};
+
 /START_STRUCT/NAME@CFLStoreData/SIZE@0x60/
     /M/u8 height/0x1/0x2e/
     /M/u8 weight/0x1/0x2f/

@@ -33,10 +33,12 @@ BEGIN_NAMESPACE(Kart)
 		/M/PartsDriveParam *m_parts_drive_param/0x4/0x48/
 		/M/System::ControllerBase *m_0x4C_kd_pad_controller/0x4/0x4C/
 		/M/Driver *m_driver/0x4/0x50/
-		/M/DispBody *m_disp_body/0x4/0x54/
+		/M/DispBody *m_disp_body/0x4/0x5c/
 		/M/DispWing *m_disp_wing/0x4/0x1E8/
 		/M/Render::DrawMdl *m_kart_shadow/0x4/0x1F4/
+		/M/GhostVisible *m_ghost_visible/0x4/0x200/
 		/M/DispKiller *m_disp_killer/0x4/0x204/
 		/M/Camera *m_camera/0x4/0x214/
+		/M/bool m_is_body_model_visible/0x1/0x3cc/
 	/END/
 }
