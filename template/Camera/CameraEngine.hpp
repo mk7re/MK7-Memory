@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../forward.hpp"
 #include "../types.hpp"
 
 BEGIN_NAMESPACE(Camera)
@@ -8,5 +9,17 @@ BEGIN_NAMESPACE(Camera)
     public:
         /START_STRUCT/NAME@Argument/SIZE@0xC/
         /END/
+
+        // NOTE: guessed name
+        /START_STRUCT/NAME@SDirectorList/SIZE@0xC/
+            /M/KartCameraDirector *m_kart_camera_director/0x4/0x0/
+            /U/void */0x4/0x4/
+            /M/DefaultCameraDirector *m_default_camera_director/0x4/0x8/
+        /END/
+
+        using creator_t = void (*)(CameraEngine *, SDirectorList *);
+
+        /M/SDirectorList *m_director_list/0x4/0x1C/
+        /M/creator_t m_creator_list[8]/0x20/0x20/
     /END/
 }

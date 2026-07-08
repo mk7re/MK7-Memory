@@ -16,6 +16,7 @@ BEGIN_NAMESPACE(System)
 
         inline auto get_character_engine_director_list() const { return m_root_scene->get_character_engine()->m_director_list; }
         inline auto get_render_engine_director_list() const { return m_root_scene->get_render_engine()->m_director_list; }
+        inline auto get_camera_engine_director_list() const { return m_root_scene->get_camera_engine()->m_director_list; }
 
         RootScene *m_root_scene;
     };

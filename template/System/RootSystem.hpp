@@ -33,6 +33,9 @@ BEGIN_NAMESPACE(System)
         inline auto get_menu_data() const { return m_root_scene->get_sequence_engine()->m_menu_data; }
         inline auto get_message_id_converter() const { return m_root_scene->get_sequence_engine()->m_message_id_converter; }
 
+        inline auto get_kart_camera_director() const { return m_scene_manager->get_camera_engine_director_list()->m_kart_camera_director; }
+        inline auto get_default_camera_director() const { return m_scene_manager->get_camera_engine_director_list()->m_default_camera_director; }
+
         /M/SceneManager *m_scene_manager/0x4/0x4/
         /M/ThreadManager *m_thread_manager/0x4/0xC/
         /M/RootScene *m_root_scene/0x4/0x10/

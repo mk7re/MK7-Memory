@@ -13,6 +13,7 @@ BEGIN_NAMESPACE(Camera)
 	class CameraBase;
 	class CameraEngine;
 	class KartCameraDirector;
+	class DefaultCameraDirector;
 }
 
 BEGIN_NAMESPACE(CSVUtil)
