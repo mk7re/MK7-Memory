@@ -2,6 +2,7 @@
 
 #include "../forward.hpp"
 #include "../types.hpp"
+#include "../System/RootSystem.hpp"
 #include "../Field/ObjectDirector.hpp"
 
 BEGIN_NAMESPACE(Object)

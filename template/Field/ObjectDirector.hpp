@@ -2,7 +2,6 @@
 
 #include "../forward.hpp"
 #include "../types.hpp"
-#include "../System/RootSystem.hpp"
 #include "ObjectBase.hpp"
 
 #include "container/seadPtrArray.h"
