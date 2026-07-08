@@ -23,6 +23,7 @@ BEGIN_NAMESPACE(System)
         inline auto get_object_director() const { return m_scene_manager->get_character_engine_director_list()->m_object_director; }
         inline auto get_race_director() const { return m_scene_manager->get_character_engine_director_list()->m_race_director; }
         inline auto get_item_director() const { return m_scene_manager->get_character_engine_director_list()->m_item_director; }
+        inline auto get_demo_camera_director() const { return m_scene_manager->get_character_engine_director_list()->m_demo_camera_director; }
 
         inline auto get_nwlyt_resource_accessor() const { return m_scene_manager->get_render_engine_director_list()->m_ui_draw_director->m_layout_resource_accessor; }
 

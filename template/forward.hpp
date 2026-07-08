@@ -23,6 +23,9 @@ BEGIN_NAMESPACE(CSVUtil)
 BEGIN_NAMESPACE(Demo)
 {
 	class DemoCameraDirector;
+	class DemoCameraBase;
+	class DemoCameraGoal;
+	class DemoCameraStart;
 }
 
 BEGIN_NAMESPACE(Debug)
@@ -94,6 +97,7 @@ BEGIN_NAMESPACE(Field)
 	class MapdataPathAccessor;
 	class MapdataStageAccessor;
 	class MapdataStartPointAccessor;
+	class MapdataCamera;
 	class MenuVRModel;
 	class ObjectDirector;
 	class QuadTree;
