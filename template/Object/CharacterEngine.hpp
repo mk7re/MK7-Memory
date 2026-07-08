@@ -12,6 +12,25 @@ BEGIN_NAMESPACE(Object)
 {
     /START_CLASS/NAME@CharacterEngine/SIZE@0x54/BASE@TDirectorList<Actor, ActorEngine>/BSIZE@0x1C/
     public:
+        enum class EMode : u8 {
+            TITLE,
+            MENU,
+            RACE,
+            TROPHY,
+            THANKYOU,
+            ENDING,
+            DEMO,
+            REFSETTING,
+            VIEWER,
+            DEFAULT
+        };
+
+        /START_STRUCT/NAME@Argument/SIZE@0xc/
+            /U/void */0x4/0x0/
+            /M/RaceSys::CRaceInfo *m_race_info/0x4/0x4/
+            /M/EMode m_creator_mode/0x1/0x8/
+        /END/
+
         // NOTE: guessed name
         /START_STRUCT/NAME@SDirectorList/SIZE@0x58/
             /M/KDGndCol::Manager *m_gnd_col_manager/0x4/0x8/

@@ -13,6 +13,9 @@ BEGIN_NAMESPACE(Render)
     // NOTE: Size: 0x84 in ALL_DLP
     /START_CLASS/NAME@RenderEngine/SIZE@0x88/BASE@Object::TDirectorList<Object::Actor, Object::ActorEngine>/BSIZE@0x1C/
     public:
+        /START_STRUCT/NAME@Argument/SIZE@0xC/
+        /END/
+
         // NOTE: guessed name
         /START_STRUCT/NAME@SDirectorList/SIZE@0x44/
             /M/UIDrawDirector *m_ui_draw_director/0x4/0x20/

@@ -327,6 +327,8 @@ BEGIN_NAMESPACE(Sequence)
 	class DummyPage;
 	class DelegateSequence;
 	class ExecutableSection;
+	class EngineCreatorBase;
+	class DashEngineCreatorManager;
 	class FaderPage;
 	class LayeredSequence;
 	class MenuData;
