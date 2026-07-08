@@ -14,6 +14,10 @@ BEGIN_NAMESPACE(Render)
 {
     /START_CLASS/NAME@DrawMdl/SIZE@0xC4/BASE@sead::IDisposer/BSIZE@0x10/VTABLE@True/
     public:
+        enum EFlags : u32 {
+            DRAWMDL_FLAG_VISIBLE = 0x00000001
+        };
+
         virtual ~DrawMdl();
 
         DrawMdl();
@@ -76,6 +80,6 @@ BEGIN_NAMESPACE(Render)
         /M/f32 m_material_anim_idx/0x4/0xa4/ // TODO: Double check is this is a f32 or a s32
         /M/s32 m_material_anim_num/0x4/0xa8/
         /M/bool m_material_anim_exists/0x1/0xac/
-        /M/u32 m_flags/0x4/0xc0/
+        /M/u32 m_flags/0x4/0xc0/            // See the `EFlags` enum
     /END/
 }
