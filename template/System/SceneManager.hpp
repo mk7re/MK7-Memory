@@ -6,6 +6,7 @@
 
 #include "../Render/RenderEngine.hpp"
 #include "../Object/CharacterEngine.hpp"
+#include "../Camera/CameraEngine.hpp"
 
 BEGIN_NAMESPACE(System)
 {
