@@ -85,12 +85,13 @@ BEGIN_NAMESPACE(Demo)
         /M/Kart::InfoProxy *m_kart_info/0x4/0x68/
         /M/sead::Delegate<DemoCameraDirector> m_change_camera_delegate/0x10/0x6c/   // `Demo::DemoCameraDirector::changeCamera`
         /M/RaceSys::ECourseID m_course/0x4/0x7c/
-        /M/s32 m_current_camera_index/0x4/0x80/ // Or current area index?
-        /M/s32 m_next_camera_index/0x4/0x84/
-        /M/s32 m_current_demo_camera_index/0x4/0x88/
-        /M/s32 m_next_demo_camera_index/0x4/0x8c/
+        /M/s32 m_current_demo_camera_index/0x4/0x80/ // Or current area index?
+        /M/s32 m_next_demo_camera_index/0x4/0x84/
+        /U/s32/0x4/0x88/
+        /U/s32/0x4/0x8c/
         /M/s32 m_camera_target_player_id/0x4/0x90/
-        /M/s32 m_current_camera_active_time/0x4/0x94/
+        // Counts up to 300
+        /M/s32 m_goal_camerea_active_time/0x4/0x94/
         // Current camera time while in `Demo::DemoCameraDirector::stateNormal`
         /M/s32 m_state_normal_current_camera_time/0x4/0x98/
         /M/bool m_is_initialized/0x1/0x9c/
@@ -100,6 +101,8 @@ BEGIN_NAMESPACE(Demo)
         /M/bool m_is_replay/0x1/0xa0/
         /M/bool m_was_first_person/0x1/0xa1/
         /M/bool m_is_first_person/0x1/0xa2/
-        /M/bool m_is_goal_camera_activated/0x1/0xa3/
+        // Set to `true` when displaying the dynamic demo cameras.
+        // Otherwise (regular 3rd and 1st person camera) false
+        /M/bool m_is_demo_camera_activated/0x1/0xa3/
     /END/
 }

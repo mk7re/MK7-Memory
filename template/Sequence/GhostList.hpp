@@ -36,8 +36,13 @@ BEGIN_NAMESPACE(Sequence)
 
         /M/System::GhostLoader *m_ghost_loader/0x4/0x0/
         /M/sead::PtrArray<GhostPtr> m_ghost_ptr_array/0xC/0x4/
+        /// A list? ///
+        /M/GhostPtr *m_ghost_ptr_array_buffer_head/0x4/0x10/
+        /M/GhostPtr *m_ghost_ptr_array_buffer_tail/0x4/0x14/
         /M/GhostPtr m_ghost_ptr_array_buffer[GHOST_LIST_MAX]/0xb8/0x18/
-        /M/System::GhostLoader::GhostData *m_ghost_list[GHOST_LIST_MAX]/0x5c/0xd0/
+        ///         ///
+        // Buffer space for `m_ghost_ptr_array`. Points to entries saved in `m_ghost_ptr_array_buffer`
+        /M/GhostPtr *m_ghost_ptr_array_buffer_ptrs[GHOST_LIST_MAX]/0x5c/0xd0/
         /M/s32 m_num_ghosts/0x4/0x12c/
         /M/s32 m_num_player_ghosts/0x4/0x130/
         /M/s32 m_num_staff_ghosts/0x4/0x134/
