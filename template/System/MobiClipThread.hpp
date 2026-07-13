@@ -4,6 +4,7 @@
 #include "../forward.hpp"
 #include "../types.hpp"
 #include "../versions.h"
+#include "common.hpp"
 
 #include <heap/seadExpHeap.h>
 #include <nw/lyt/Picture.hpp>
@@ -34,7 +35,10 @@ BEGIN_NAMESPACE(System)
         public:
             /M/VideoDrawerThread *m_video_drawer_thread/0x4/0x0/
             /M/Params *m_params/0x4/0x98/
+            /M/bool m_is_playing_movie/0x1/0x160/
             /M/bool m_is_stopped/0x1/0x161/
+            /M/bool m_is_mirror_mode/0x1/0x163/
+            /M/bool m_use_additional_core/0x1/0x166/
             /M/bool m_in_calc_state/0x1/0x167/
         /END/
 
@@ -54,9 +58,10 @@ BEGIN_NAMESPACE(System)
         void stopMovie();                               // 0x0017e6b8 (VERSION_USA_REV1)
         void stopMovieAndFreeResources();               // 0x0017db88 (VERSION_USA_REV1)
         void terminate();                               // 0x0017f2e0 (VERSION_USA_REV1)
-        void applyParams(const Params &);               // 0x0017e084 (VERSION_USA_REV1)
-        // Might be a static `BaseMenuPage` or `MenuMoviePageBase` function, based on the address?
-        static void playMovie(const char *, bool);      // 0x004a4370 (VERSION_USA_REV1)
+        void applyParams_ModeSelect(const Params &);            // 0x0017e084 (VERSION_USA_REV1)
+        void applyParams_CourseAndCupSelect(const Params &);    // 0x0017dc74 (VERSION_USA_REV1)
+        s32 getSelectedCupCourse();                     // 0x004ea1e0 (VERSION_USA_REV1)
+        static void FUN_004a3d6c();                     // 0x004a3d6c (VERSION_USA_REV1)
 
         /M/sead::ExpHeap *m_moflex_heap/0x4/0xe0/
         /M/Info m_info/0x168/0x1558/
@@ -67,12 +72,16 @@ BEGIN_NAMESPACE(System)
     public:
         MobiClipThreadProxy();                          // 0x00144b10 (VERSION_USA_REV1)
         void draw();                                    // 0x00144aa8 (VERSION_USA_REV1)
+        bool isPlayingMovie() const;                    // 0x004e169c (VERSION_USA_REV1)
+        bool isVisible() const;                         // 0x004e165c (VERSION_USA_REV1)
 
         /M/nw::lyt::Picture *m_movie_pane/0x4/0x0/      // Usually `P_movie_dammy`
         /M/MobiClipThread *mobiclip_thread/0x4/0x4/
     /END/
 
-    extern MobiClipThread::Params unk_0069438c[5];      // 0x0069438c (VERSION_USA_REV1)
-    extern MobiClipThread::Params g_movie_params[8];    // 0x00692a64 (VERSION_USA_REV1)
+    extern MobiClipThread::Params g_movie_params_course_select[NUM_CUPS][NUM_COURSES_PER_CUP];      // 0x00692ec4 (VERSION_USA_REV1)
+    extern MobiClipThread::Params g_movie_params_course_select_battle[NUM_BATTLE_COURSES];          // 0x00694044 (VERSION_USA_REV1)
+    extern MobiClipThread::Params g_movie_params_cup_select[NUM_CUPS];                              // 0x00692a64 (VERSION_USA_REV1)
+    extern MobiClipThread::Params g_movie_params_mode_select[NUM_MODES];                            // 0x0069438c (VERSION_USA_REV1)
 #endif
 }

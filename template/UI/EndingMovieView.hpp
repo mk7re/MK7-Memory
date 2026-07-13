@@ -19,8 +19,8 @@ BEGIN_NAMESPACE(UI)
         virtual Object::DTIClassInfo *getDTIClassInfo() const;
         virtual Object::DTIClassInfo *getDTIClass() const;
         virtual ~EndingMovieView();
-        void create(const Object::ArgumentObj *);
-        void draw(Control::EDrawScreen);
+        virtual void create(const Object::ArgumentObj *);
+        virtual void draw(Control::EDrawScreen);
 
         /M/System::MobiClipThreadProxy *m_mobiclip_thread/0x4/0xa8/
     /END/

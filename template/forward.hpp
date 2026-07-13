@@ -530,6 +530,7 @@ BEGIN_NAMESPACE(UI)
 	class MenuDialogHalfBody;
 	class SystemDialogButton;
 	class GessoControl;
+	class MovieView;
 	class EndingMovieView;
 	class StaffRoll;
 	class RaceItemBoxControl;

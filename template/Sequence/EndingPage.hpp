@@ -5,6 +5,8 @@
 
 #include "BasePage.hpp"
 
+#include <prim/seadSafeString.hpp>
+
 BEGIN_NAMESPACE(Sequence)
 {
     /START_CLASS/NAME@EndingPage/SIZE@0x2B4/BASE@BasePage/BSIZE@0x26C/VTABLE@True/
@@ -29,4 +31,6 @@ BEGIN_NAMESPACE(Sequence)
         /U/u8/0x1/0x2b0/
         /U/bool/0x1/0x2b1/
     /END/
+
+    extern sead::SafeString g_ending_movie_names[2]; // 0x00692a54 (VERSION_USA_REV1)
 }

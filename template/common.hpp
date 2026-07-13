@@ -9,6 +9,7 @@
 #define NUM_BATTLE_COURSES 6
 #define NUM_COURSES (NUM_RACE_COURSES + NUM_BATTLE_COURSES + 2)
 #define NUM_CUPS 8
+#define NUM_MODES 5     // Number of single and local multiplayer modes (GP, TT, VS, Balloon Battle and Coin Runners)
 #define NUM_COURSES_PER_CUP (NUM_RACE_COURSES / NUM_CUPS)
 #define NUM_ENGINE_CLASSES 4
 #define NUM_SCROLL_LIST_VISIBLE_ENTRIES 5

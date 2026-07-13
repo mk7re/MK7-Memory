@@ -8,7 +8,7 @@ BEGIN_NAMESPACE(UI)
 {
     /START_CLASS/NAME@CursorMove/SIZE@0x24/
     public:
-         enum class EType : u8
+        enum class EType : u8
         {
             NEXT_ROW,
             NEXT_COL,
@@ -20,6 +20,14 @@ BEGIN_NAMESPACE(UI)
             NEXT_DONT_MOVE
         };
 
+        enum EDir : s32 {
+            DIR_RIGHT     = 0x00000001,
+            DIR_LEFT      = 0x00000002,
+            DIR_DOWN      = 0x00000004,
+            DIR_UP        = 0x00000008,
+            DIR_NEUTRAL   = 0x10000000      // No direction
+        };
+
         s32 next_DontMove(CursorItem *);
         s32 next_CupSelect(CursorItem *);
         s32 next_PartsSlot(CursorItem *);
@@ -28,7 +36,7 @@ BEGIN_NAMESPACE(UI)
         s32 next_Matrix(CursorItem *);
         s32 next_Matrix_Impl(CursorItem *, s32, s32);
         s32 next(CursorItem *);
-        s32 getDir(CursorItem *);
+        s32 getDir(CursorItem *);   // See the `EDir` enum
         s32 setType(EType);
         s32 next_Col(CursorItem *);
         s32 next_Row(CursorItem *);
