@@ -9,7 +9,7 @@ BEGIN_NAMESPACE(RaceSys)
         SinglePlayer,
         MultiPlayer,
         Online,
-        TitleDemo,
+        Demo,       // Title demo, awards and course preview
         Replay,
         MAX,
     };
