@@ -533,6 +533,7 @@ BEGIN_NAMESPACE(UI)
 	class EndingMovieView;
 	class StaffRoll;
 	class RaceItemBoxControl;
+	class RaceItemEquipControl;
 }
 
 BEGIN_NAMESPACE(Util)

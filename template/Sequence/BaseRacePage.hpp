@@ -201,6 +201,7 @@ BEGIN_NAMESPACE(Sequence)
 
         /M/RaceSys::CRaceMode m_race_mode/0xC/0x26C/
         /M/UI::RaceItemBoxControl *m_race_itembox_control/0x4/0x280/
+        /M/UI::RaceItemEquipControl *m_race_item_equip_control/0x4/0x284/
         /M/UI::RaceRankControl *m_race_rank_control/0x4/0x288/
         /M/UI::LapControl *m_lap_control/0x4/0x290/
         /M/UI::CoinControl *m_coin_control/0x4/0x294/
