@@ -532,6 +532,7 @@ BEGIN_NAMESPACE(UI)
 	class GessoControl;
 	class EndingMovieView;
 	class StaffRoll;
+	class RaceItemBoxControl;
 }
 
 BEGIN_NAMESPACE(Util)
