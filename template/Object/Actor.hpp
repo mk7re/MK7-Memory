@@ -35,6 +35,14 @@ BEGIN_NAMESPACE(Object)
 
 		virtual void _0x44() = 0; // 17
 
+		Actor();
+		void initOuterImpl();
+		void calcOuter();
+		void renderOuter();
+		void renderMainLOuter();
+		void renderMainROuter();
+		void renderSubOuter();
+
 		inline Actor *getParent() const { return m_parent; }
 		inline void setParent(Actor *parent) { m_parent = parent; }
 

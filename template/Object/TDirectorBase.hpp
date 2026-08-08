@@ -10,8 +10,11 @@ BEGIN_NAMESPACE(Object)
     class TDirectorBase : public Base
     {
     public:
+        // A list of actors
         It m_it;
-        u8 m_unk;
+        // Inside the `accept` functions, setting this to `true`
+        // prevents the children actors from `m_it` to be visited
+        bool m_stop_actor_children_traversal;
     };
     static_assert(sizeof(TDirectorBase<void *, Actor, void *>) == 0x10);
 }
