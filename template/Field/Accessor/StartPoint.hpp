@@ -1,11 +1,14 @@
 #pragma once
 
+#include "../../KDAttT.hpp"
 #include "base.hpp"
 
 #include "../Entry/StartPoint.hpp"
 
 #include "../CourseInfo.hpp"
 #include "../FieldDirector.hpp"
+
+#include <math/seadVector.hpp>
 
 BEGIN_NAMESPACE(Field)
 {
@@ -16,4 +19,6 @@ BEGIN_NAMESPACE(Field)
     {
         return GetDirector()->m_course_info->m_start_point_accessor;
     }
+
+    void GetKartStartPosAtt(sead::Vector3f *, KDAttT *, s32);
 }

@@ -115,6 +115,7 @@ BEGIN_NAMESPACE(Field)
 	class ObjectWiiEscalator;
 	class ObjectCollisionBase;
 	class ObjectCreateArgument;
+	class ObjectCollisionResult;
 }
 
 BEGIN_NAMESPACE(Item)
@@ -202,8 +203,15 @@ BEGIN_NAMESPACE(Kart)
 
 BEGIN_NAMESPACE(KDGndCol)
 {
+	class Block;
 	class Manager;
+	class CheckIF;
 	class CheckIF_EX;
+	class HitInfo;
+	class HitInfoImpl;
+	class KColData;
+	class KColDataBlockCache;
+	class NarrowIF;
 }
 
 BEGIN_NAMESPACE(LibEffect)
@@ -375,6 +383,7 @@ BEGIN_NAMESPACE(Sound)
 	class SndActorBase;
 	class SndActorItem;
 	class SndActorKart;
+	class SndActorObj;
 	class SndBase;
 	class SndBgm;
 	class SndEngine;
@@ -550,6 +559,7 @@ BEGIN_NAMESPACE(UI)
 
 BEGIN_NAMESPACE(Util)
 {
+	class CollisionResult;
 	class ExcelORManager;
 	class Shape;
 }

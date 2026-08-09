@@ -93,4 +93,6 @@ BEGIN_NAMESPACE(Field)
         /M/sead::PtrArray<Parameter> m_parameters/0xC/0x0/
         /M/s32 m_object_count/0x4/0xC/
     /END/
+
+    ObjectParameter::Parameter *GetObjectParameter(eMapdataGeoObjID);
 }
