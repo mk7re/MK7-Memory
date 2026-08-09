@@ -9,9 +9,9 @@
 BEGIN_NAMESPACE(Field)
 {
     /START_STRUCT/NAME@SFieldObjCreatorFuncNode/SIZE@0x10/
-        static bool D_005f5d50;                                                     // 0x005f5d50 (VERSION_EUR_DLP)
-        static SFieldObjCreatorFuncNode *D_00608870;                                // 0x00608870 (VERSION_EUR_DLP)
-        static sead::PtrArray<SFieldObjCreatorFuncNode> s_creator_func_node_array;  // 0x00608864 (VERSION_EUR_DLP)
+        static bool s_list_initialized;                           // 0x005f5d50 (VERSION_EUR_DLP)
+        static SFieldObjCreatorFuncNode *s_list_node;             // 0x00608870 (VERSION_EUR_DLP)
+        static sead::PtrArray<SFieldObjCreatorFuncNode> s_list;   // 0x00608864 (VERSION_EUR_DLP)
 
         u32 calcSortKey();
         static s32 compare(const SFieldObjCreatorFuncNode *, const SFieldObjCreatorFuncNode *);
