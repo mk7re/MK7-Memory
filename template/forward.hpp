@@ -76,6 +76,7 @@ BEGIN_NAMESPACE(Field)
 	class ClipContext;
 	class CourseInfo;
 	class FieldDirector;
+	class GeoHitTable;
 	class MapdataAreaAccessor;
 	class MapdataAreaCalcBase;
 	class MapdataCameraAccessor;
@@ -103,8 +104,17 @@ BEGIN_NAMESPACE(Field)
 	class ObjectDirector;
 	class QuadTree;
 	class ObjectBase;
+	class ObjectBdBoard;
+	class ObjectTcBoard;
+	class ObjectCmnMiiManager;
+	class ObjectHsAirCurrent;
 	class ObjectPathBase;
+	class ObjectGeneratorBase;
+	class ObjectParameter;
+	class ObjectVRDefault;
+	class ObjectWiiEscalator;
 	class ObjectCollisionBase;
+	class ObjectCreateArgument;
 }
 
 BEGIN_NAMESPACE(Item)
@@ -272,6 +282,7 @@ BEGIN_NAMESPACE(Object)
 	class Coin;
 	class CoinManager;
 	class DTIClassInfo;
+	class GrObjManager;
 	class Trophy3DModelManager;
 }
 
