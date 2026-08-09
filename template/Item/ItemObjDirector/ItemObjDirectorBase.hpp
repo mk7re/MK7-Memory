@@ -36,8 +36,8 @@ BEGIN_NAMESPACE(Item)
 
         virtual void _0x44() = 0; // 17
 
-        virtual void createBeforeStructure(void const *) {}; // 18
-        virtual void createAfterStructure(void const *) {}; // 19
+        virtual void createBeforeStructure(const Object::ArgumentObj *) {}; // 18
+        virtual void createAfterStructure(const Object::ArgumentObj *) {}; // 19
         virtual void initBeforeStructure() {}; // 20
         virtual void initAfterStructure() {}; // 21
         virtual void calcBeforeStructure() {}; // 22

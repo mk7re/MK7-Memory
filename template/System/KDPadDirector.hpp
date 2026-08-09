@@ -45,7 +45,7 @@ BEGIN_NAMESPACE(System)
         virtual Object::DTIClassInfo *getDTIClassInfo() const;
         virtual Object::DTIClassInfo *getDTIClass() const;
         void calc();
-        void createBeforeStructure();
+        void createBeforeStructure(const Object::ArgumentObj *);
         void initAfterStructure();
 
         void acceptGyroChange();

@@ -13,5 +13,7 @@ BEGIN_NAMESPACE(Object)
         virtual void sceneExit(System::SceneID) {}; // 19
 
         virtual void _0x50() = 0; // 20
+
+        ActorEngine();
     /END/
 }
