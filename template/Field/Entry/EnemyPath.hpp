@@ -2,9 +2,11 @@
 
 #include <container/seadPtrArray.h>
 
+#include "../../forward.hpp"
 #include "../../types.hpp"
 
 #include "base.hpp"
+#include "../ObjectBase.hpp"
 
 BEGIN_NAMESPACE(Field)
 {
@@ -18,6 +20,8 @@ BEGIN_NAMESPACE(Field)
 
     /START_CLASS/NAME@MapdataEnemyPath/SIZE@0x40/BASE@MapdataDataBase<MapdataEnemyPathData>/BSIZE@0x4/
     public:
-        /U/sead::FixedPtrArray<void, 8>/0x2C/0x14/
+        void createDepth_(s32, MapdataEnemyPathAccessor *);
+
+        /M/sead::FixedPtrArray<ObjectBase, 8> m_obj_link_array/0x2C/0x14/
     /END/
 }

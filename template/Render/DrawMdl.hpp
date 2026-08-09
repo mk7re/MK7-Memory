@@ -14,6 +14,12 @@ BEGIN_NAMESPACE(Render)
 {
     /START_CLASS/NAME@DrawMdl/SIZE@0xC4/BASE@sead::IDisposer/BSIZE@0x10/VTABLE@True/
     public:
+        /START_CLASS/NAME@MatAnimLeader/SIZE@0x18/
+        public:
+            void appear(DrawMdl *);
+            void retire(DrawMdl *);
+        /END/
+
         enum EFlags : u32 {
             DRAWMDL_FLAG_VISIBLE = 0x00000001
         };
@@ -68,7 +74,7 @@ BEGIN_NAMESPACE(Render)
         void CreateMaterialActivatorFixed(void * /* nw::gfx::Model */ *, void * /* nw::os::IAllocator */ *);
         void beginRegistMaterialAnimation(s32);
         void *createMaterialAnimationLeader();
-        void followMaterialAnimationLeader(void * /* Render::DrawMdl::MatAnimLeader */ *);
+        void followMaterialAnimationLeader(MatAnimLeader *);
         void updateMaterialAnimationForcibly();
         void RetouchResModelForRejectingThunder(void * /* nw::gfx::res::ResModel */);
         bool isStepOver(f32) const;

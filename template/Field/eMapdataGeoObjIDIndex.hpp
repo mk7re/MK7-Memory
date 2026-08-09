@@ -4,7 +4,7 @@
 
 BEGIN_NAMESPACE(Field)
 {
-    enum class eMapdataGeoObjIDIndex
+    enum class eMapdataGeoObjIDIndex : u16
     {
         ef_env_sun,
         SoundPoint,
