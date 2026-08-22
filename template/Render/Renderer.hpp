@@ -13,8 +13,8 @@ BEGIN_NAMESPACE(Render)
             SUB         // Bottom screen
         };
 
-        virtual DTIClassInfo *getDTIClassInfo() const;
-		virtual DTIClassInfo *getDTIClass() const;
+        virtual Object::DTIClassInfo *getDTIClassInfo() const;
+		virtual Object::DTIClassInfo *getDTIClass() const;
         virtual void init();
 		virtual void calc();
 		virtual void render();

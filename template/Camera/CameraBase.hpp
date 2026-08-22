@@ -1,7 +1,9 @@
 #pragma once
 
 #include "../Object/Actor.hpp"
-#include "math/seadVector.h"
+
+#include <nw/gfx/Camera.hpp>
+#include <math/seadVector.h>
 
 BEGIN_NAMESPACE(Camera)
 {
@@ -14,6 +16,6 @@ BEGIN_NAMESPACE(Camera)
         /M/sead::Vector3f m_look_at/0xC/0x38/
         /U/sead::Vector3f/0xC/0x44/
         /M/bool m_enabled/0x4/0x100/ // Setting to false revents the camera from updating
-        /M/void* m_mw_gfx_camera/0x4/0x108/ // TODO: Implement nw::gfx::Camera
+        /M/nw::gfx::Camera *m_nw_gfx_camera/0x4/0x108/
     /END/
 }

@@ -3,11 +3,15 @@
 #include "../forward.hpp"
 #include "../Object/Actor.hpp"
 #include "../Render/Renderer.hpp"
-#include "math/seadVector.h"
+
+#include <nw/gfx/Camera.hpp>
+#include <nn/math/MTX.h>
+#include <nn/ulcd/CTR/StereoCamera.h>
+#include <math/seadVector.h>
 
 BEGIN_NAMESPACE(Camera)
 {
-    /START_CLASS/NAME@FinalOutputCamera/SIZE@0xA4/
+    /START_CLASS/NAME@FinalOutputCamera/SIZE@0xA4/VTABLE@True/
     public:
         virtual void update(CameraBase *, CameraBase *);
 
@@ -15,7 +19,7 @@ BEGIN_NAMESPACE(Camera)
         void calcStereoCamera(const nw::gfx::Camera *, nn::math::MTX34 *, nn::math::MTX44 *);
         void setCurrentViewAndProjMtx(Render::Renderer::ERenderLocale);
 
-        // This might be an array ? //
+        // This might be an array? //
         /U/u32/0x4/0x4/
         /M/nn::math::MTX44 *m_proj_L/0x4/0x8/
         /U/u32/0x4/0xc/
