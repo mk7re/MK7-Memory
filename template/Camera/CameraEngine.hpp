@@ -21,5 +21,7 @@ BEGIN_NAMESPACE(Camera)
 
         /M/SDirectorList *m_director_list/0x4/0x1C/
         /M/creator_t m_creator_list[8]/0x20/0x20/
+        /M/FinalOutputCamera *m_final_output_camera/0x4/0x48/
+        /M/FinalOutputCamera *m_final_output_camera_2/0x4/0x4c/
     /END/
 }

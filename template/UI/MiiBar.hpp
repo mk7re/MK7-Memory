@@ -18,6 +18,8 @@ BEGIN_NAMESPACE(UI)
         void setCharaTex(RaceSys::EDriverID, s32);
         void setMiiTex(Mii::Icon *);
         void setMiiTex(u32);
+        void setDriverTex(RaceSys::EDriverID, s32);                     // 0x00281a68 (VERSION_EUR_DLP)
+        void setDriverTexFromConnectorInfo(RaceSys::EDriverID, s32);    // 0x00281d60 (VERSION_EUR_DLP)
 
         /M/nw::lyt::TextBox *m_T_name1/0x4/0x7c/
         /M/nw::lyt::Pane *m_P_mii/0x4/0xa8/

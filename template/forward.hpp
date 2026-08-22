@@ -12,6 +12,7 @@ BEGIN_NAMESPACE(Camera)
 {
 	class CameraBase;
 	class CameraEngine;
+	class FinalOutputCamera;
 	class KartCameraDirector;
 	class DefaultCameraDirector;
 }
@@ -319,9 +320,12 @@ BEGIN_NAMESPACE(Render)
 	}
 
 	class DrawMdl;
+	class DrawMdlMgr;
 	struct DrawMdlCreateArgs;
 	class LightSet;
 	class RenderEngine;
+	class Renderer;
+	class Screen;
 	class ShadowVolume;
 	class UIDrawDirector;
 	class UIDrawDirectorFast;
