@@ -10,6 +10,8 @@
 #include "RaceSys/CRaceMode.hpp"
 #include "BasePage.hpp"
 
+#include <nw/lyt/TextureInfo.hpp>
+#include <prim/seadDelegate.h>
 #include <container/seadPtrArray.h>
 #include <prim/seadSafeString.hpp>
 #include <math/seadVector.hpp>
@@ -65,7 +67,9 @@ BEGIN_NAMESPACE(Sequence)
             PAUSE,
             GOAL,
             ON_RESULT,
-            ON_NEXT_MENU
+            ON_NEXT_MENU,
+
+            MAX
         };
 
         // NOTE: Name is made up
@@ -206,8 +210,8 @@ BEGIN_NAMESPACE(Sequence)
         /M/UI::LapControl *m_lap_control/0x4/0x290/
         /M/UI::CoinControl *m_coin_control/0x4/0x294/
         /M/UI::PointControl *m_point_control/0x4/0x298/
-        /M/UI::BgRaceMapControl *m_bg_race_map_control_1/0x4/0x29C/
-        /M/UI::BgRaceMapControl *m_bg_race_map_control_2/0x4/0x2A0/
+        /M/UI::BgRaceMapControl *m_current_bg_race_map_control/0x4/0x29C/
+        /M/UI::BgRaceMapControl *m_bg_race_map_control/0x4/0x2A0/
         /M/UI::BgRaceMapControl *m_bg_race_zoom_map_control/0x4/0x2A4/
         /M/UI::BgRaceMapCharaControl *m_bg_race_map_chara_control[KART_MAX]/0x20/0x2A8/
         /M/UI::MenuCaption *m_menu_caption/0x4/0x318/
@@ -232,19 +236,42 @@ BEGIN_NAMESPACE(Sequence)
         /M/u32 m_target_player_id/0x4/0x3a0/
         /M/bool m_display_rankboard/0x1/0x3a4/
         /M/bool m_update_rankboard/0x1/0x3a5/
+        /M/s32 m_time_before_switching_to_results/0x4/0x3a8/
+        /M/s32 m_race_new_record_display_timer/0x4/0x3ac/
         /M/s32 m_on_back_return_code/0x4/0x3b4/
         /M/u8 m_fader_type/0x4/0x3b8/
+        /M/sead::Delegate<BaseRacePage> m_calc_state_delegate[static_cast<u32>(ERaceState::MAX)]/0x60/0x3bc/    // One per ERaceState
+        /M/sead::Delegate<BaseRacePage> m_calc_input_delegate/0x10/0x41c/
+        /M/bool m_is_single_player_or_master_player_replay/0x1/0x42c/
+        /M/bool m_can_pause/0x1/0x42d/      // Can pause the game while in-race. Set to `false` for multiplayer and online
+        /M/s32 m_on_exit_return_code/0x4/0x438/
         /M/u8 m_calc_save_state/0x1/0x440/
         /M/bool m_change_calc_save_state/0x1/0x441/
+        /M/bool m_request_save/0x1/0x442/
+        /M/bool m_is_new_save/0x1/0x443/
+        /M/bool m_not_time_trial/0x1/0x444/
+        /M/bool m_display_caption_at_end_of_time_trial/0x1/0x446/
         /M/s32 m_gp_hidden_score/0x4/0x448/
         /M/u32 m_result_bar_point_timer/0x4/0x2E34/
         /M/u32 m_result_bar_point_sound_timer/0x4/0x2E38/
         /M/u32 m_result_bar_point_increment/0x4/0x2E48/
         /M/u32 m_result_bar_point_interval/0x4/0x2E4C/
         /M/u32 m_result_bar_point_sound_interval/0x4/0x2E50/
+        /M/s32 m_total_ranks[KART_MAX]/0x20/0x3010/
+        /M/s32 m_gp_score[KART_MAX]/0x20/0x3030/
+        /M/s32 m_total_point_red_team[KART_MAX]/0x20/0x3050/
+        /M/s32 m_total_point_blue_team[KART_MAX]/0x20/0x3070/
+        /M/bool m_is_master_player[KART_MAX]/0x8/0x3098/
+        /M/nw::lyt::TextureInfo m_map_killer_r90_texture/0x14/0x30a0/
+        /M/sead::PtrArray<UI::BgRaceMapItemControl> m_bg_race_map_item_controls[static_cast<u32>(Item::eItemType::MAX)]/0xc0/0x30b4/
+        /M/sead::PtrArray<UI::BgRaceMapStarControl> m_bg_race_map_star_controls/0xC/0x3174/
+        /M/sead::PtrArray<UI::BgRaceMapFlowerControl> m_bg_race_map_flower_controls/0xC/0x3180/
+        /M/sead::PtrArray<UI::BgRaceMapLeafControl> m_bg_race_map_leaf_controls/0xC/0x318c/
         /M/sead::PtrArray<UI::BgRaceMapBombControl> m_bg_race_map_bomb_controls/0xC/0x3198/
+        /M/sead::Delegate<BaseRacePage> m_draw_item_icon_delegate/0x10/0x31e8/
         /M/bool m_is_live_view/0x1/0x31f8/
         /M/u8 m_live_view_state/0x1/0x31f9/
+        /M/bool m_is_finish_sync_finished/0x1/0x31fa/
     /END/
 
     void StartCountDown();
