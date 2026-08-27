@@ -5,7 +5,8 @@
 
 BEGIN_NAMESPACE(Render)
 {
-    /START_CLASS/NAME@UIDrawDirectorFast/SIZE@0xA30/BASE@UIDrawDirector/BSIZE@0x9C0/VTABLE@True/
+    // Size is 0xA30 in `ALL_REV0`, `ALL_KIOSK` and `ALL_DLP`
+    /START_CLASS/NAME@UIDrawDirectorFast/SIZE@0xA2C/BASE@UIDrawDirector/BSIZE@0x9BC/VTABLE@True/
     public:
         virtual Object::DTIClassInfo *getDTIClassInfo() const; // 0
 		virtual Object::DTIClassInfo *getDTIClass() const; // 1
