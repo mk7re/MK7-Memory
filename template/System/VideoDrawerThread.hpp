@@ -25,6 +25,7 @@ BEGIN_NAMESPACE(System)
         void init();                                    // 0x0017c9a8 (VERSION_USA_REV1)
         void FUN_001121b8();                            // 0x001121b8 (VERSION_USA_REV1)
         void FUN_0017c204();                            // 0x0017c204 (VERSION_USA_REV1)
+        void FUN_0017cd64();                            // 0x0017cd64 (VERSION_USA_REV1)
         void setupTexMap(nw::lyt::Picture *, bool);     // 0x0017cc3c (VERSION_USA_REV1)
         void draw(bool, bool);                          // 0x0017c890 (VERSION_USA_REV1)
 

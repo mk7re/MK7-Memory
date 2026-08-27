@@ -61,6 +61,7 @@ BEGIN_NAMESPACE(System)
         void applyParams_ModeSelect(const Params &);            // 0x0017e084 (VERSION_USA_REV1)
         void applyParams_CourseAndCupSelect(const Params &);    // 0x0017dc74 (VERSION_USA_REV1)
         s32 getSelectedCupCourse();                     // 0x004ea1e0 (VERSION_USA_REV1)
+        void FUN_0017d954();                            // 0x0017d954 (VERSION_USA_REV1)
         static void FUN_004a3d6c();                     // 0x004a3d6c (VERSION_USA_REV1)
 
         /M/sead::ExpHeap *m_moflex_heap/0x4/0xe0/
