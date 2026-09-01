@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../forward.hpp"
 #include "../types.hpp"
 
 #include "Vehicle/VehicleReact.hpp"
@@ -9,6 +10,20 @@
 BEGIN_NAMESPACE(Kart)
 {
     /START_STRUCT/NAME@NetData/SIZE@0x48/
+        NetData();
+
+        void clear(s8 player_id)
+        {
+            m_frame = 0;
+            m_accident_type = VehicleReact::EAcdType::Dummy;
+            m_sender_player_id = player_id;
+            m_kart_data = {};
+            m_dokan_warp = -1;
+        }
+
+        bool read(Net::NetworkBuffer *, NetData **, NetData **);
+        void send(s32);
+
         struct KartData
         {
             u32
