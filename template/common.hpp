@@ -5,6 +5,7 @@
 #define LAP_MAX 3
 #define OPPONENT_DATA_MAX 100
 #define GHOST_LIST_MAX (1 + 2 + 20)   // 1 player ghost + 2 staff ghosts + 20 ranking (SpotPass / StreetPass) ghosts
+#define TAKEOVER_MAX ((KART_MAX / TEAM_MAX) - 1) // 8 players max and 2 players min in an online race, so 3 takeovers max per player
 #define NUM_RACE_COURSES 32
 #define NUM_BATTLE_COURSES 6
 #define NUM_COURSES (NUM_RACE_COURSES + NUM_BATTLE_COURSES + 2)
