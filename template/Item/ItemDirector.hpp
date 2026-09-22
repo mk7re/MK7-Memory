@@ -187,6 +187,7 @@ BEGIN_NAMESPACE(Item)
         /M/CSVUtil::CSVParam *m_csv_param/0x4/0xF4/
         /M/bool m_is_lava_course/0x1/0xF8/
         /M/Field::MapdataCheckPointAccessor *m_check_point_accessor/0x4/0x100/
+        /M/Net::NetworkItemEventDataMgr::SlotData *m_slot_datas/0x4/0x11C/
     /END/
 
     inline static auto GetDirector()
