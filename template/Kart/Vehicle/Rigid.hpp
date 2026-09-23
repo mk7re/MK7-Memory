@@ -17,24 +17,23 @@ BEGIN_NAMESPACE(Kart)
 			m_position = &m_kd_mtx.m_vec;
 			m_angle = &m_kd_mtx.m_kd_att;
 
-			m_kd_min_max.reset();
+			m_velocity_min_max.reset();
 
-			m_reject = sead::Vector3f::zero;
-			m_reject_impulse = sead::Vector3f::zero;
+			m_reject.reset();
 
 			reset();
 		}
 
 		void applyReject()
 		{
-			auto reject = m_reject;
-			reject += m_reject_impulse;
+			auto reject = m_reject.m_min;
+			reject += m_reject.m_max;
 			*m_position += reject;
 		}
 
 		void inputForceW(sead::Vector3f const &vec, void (KDMinMax::*func)(sead::Vector3f const &))
 		{
-			(m_kd_min_max.*func)(vec);
+			(m_velocity_min_max.*func)(vec);
 		}
 
 		void reset()
@@ -43,10 +42,9 @@ BEGIN_NAMESPACE(Kart)
 
 			m_velocity = sead::Vector3f::zero;
 
-			m_kd_min_max.reset();
+			m_velocity_min_max.reset();
 
-			m_reject = sead::Vector3f::zero;
-			m_reject_impulse = sead::Vector3f::zero;
+			m_reject.reset();
 		}
 
 		void updatePos()
@@ -56,8 +54,8 @@ BEGIN_NAMESPACE(Kart)
 
 		void updateVel(sead::Vector3f const &vel)
 		{
-			auto res = m_kd_min_max.m_min;
-			res += m_kd_min_max.m_max;
+			auto res = m_velocity_min_max.m_min;
+			res += m_velocity_min_max.m_max;
 
 			// TODO: implement sead::Vector operator
 			m_velocity.x *= vel.x;
@@ -71,8 +69,7 @@ BEGIN_NAMESPACE(Kart)
 		/M/KDAttT *m_angle/0x4/0x30/
 		/M/sead::Vector3f *m_position/0x4/0x34/
 		/M/sead::Vector3f m_velocity/0xC/0x38/
-		/M/KDMinMax m_kd_min_max/0x18/0x44/
-		/M/sead::Vector3f m_reject/0xC/0x5C/
-		/M/sead::Vector3f m_reject_impulse/0xC/0x68/
+		/M/KDMinMax m_velocity_min_max/0x18/0x44/
+		/M/KDMinMax m_reject/0x18/0x5C/
 	/END/
 }
