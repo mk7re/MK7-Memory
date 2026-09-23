@@ -23,7 +23,7 @@ BEGIN_NAMESPACE(CSVUtil)
         // The start of the max numeric data (floats). Aka `ORRange` in MK8
         /M/void *m_raw_file_limit_data/0x4/0x8/
         // The start of the numeric data
-        /M/void *m_raw_file_limit_data/0x4/0xc/
+        /M/void *m_raw_file_value_data/0x4/0xc/
         /U/s32/0x4/0x10/
         /U/s32/0x4/0x14/
         /M/sead::FixedSafeString<32> m_directory/0x2c/0x18/
