@@ -278,6 +278,7 @@ BEGIN_NAMESPACE(Net)
 	class NetworkStationBufferManager;
 	class NetworkSupplyInfoManager;
 	class NetworkWbtMgr;
+	class RaceLogResult;
 }
 
 BEGIN_NAMESPACE(Object)
