@@ -3,6 +3,7 @@
 #include "../common.hpp"
 #include "../forward.hpp"
 #include "../types.hpp"
+#include "../versions.h"
 
 #include <container/seadBuffer.h>
 #include <prim/seadDelegate.h>
@@ -61,8 +62,10 @@ BEGIN_NAMESPACE(RaceSys)
         void calcAfterStructure();
         void raceEnd();
         void raceStart();
+#if GAME_VERSION != ALL_DLP
         void determineTitleType(s32);       // 0x0045ceb8 (VERSION_USA_REV1)
         bool saveRaceStats(s32 *);          // 0x0045d484 (VERSION_USA_REV1)
+#endif
 
         // Each index corresponds to its entry in the `EValueType` enum.
         /M/sead::Buffer<u32> m_logs[static_cast<u32>(EValueType::MAX)]/0xd8/0x0/
