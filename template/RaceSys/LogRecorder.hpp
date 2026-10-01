@@ -5,6 +5,7 @@
 #include "../types.hpp"
 
 #include <container/seadBuffer.h>
+#include <prim/seadDelegate.h>
 
 BEGIN_NAMESPACE(RaceSys)
 {
