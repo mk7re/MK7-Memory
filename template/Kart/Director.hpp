@@ -38,7 +38,7 @@ BEGIN_NAMESPACE(Kart)
         /M/bool m_has_audience/0x1/0x18C/
         /M/bool m_is_racing/0x1/0x190/
         /M/u32 m_frame_since_countdown/0x4/0x198/
-        /M/bool m_is_ai_valid/0x1/0x19C/
+        /M/bool m_is_ai_valid/0x1/0x19C/    // Set to `true` if there are CPU paths in the course and they're valid
     /END/
 
     inline static auto GetDirector()

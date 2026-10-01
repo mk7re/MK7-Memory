@@ -54,6 +54,7 @@ BEGIN_NAMESPACE(Enemy)
 	class AIBlockLine;
 	class AIControlBase;
 	class AIDriftDrive;
+	class AIEngine;
 	class AIInfo;
 	class AIItemBase;
 	class AIManager;
