@@ -46,7 +46,7 @@ BEGIN_NAMESPACE(RaceSys)
         void clear();
         /**
          * Various check are in place in this function that prevent
-         * Mii drivers as well ass any of the gold parts to be selected for CPUs.
+         * Mii drivers as well as any of the gold parts to be selected for CPUs.
          * 
          * This doesn't take into account StreetPass Miis, which are selected in other code.
          */
