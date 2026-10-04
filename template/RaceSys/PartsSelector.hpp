@@ -25,7 +25,7 @@ BEGIN_NAMESPACE(RaceSys)
         EBodyID getBodyAtRandom(EDriverID, sead::Random *);
         /**
          * The three "get recommend" functions run using a few "modes" which determine
-         * how the recommended parts are going to be selected. These modes are chosen randomly per CPU.
+         * how the parts are going to be selected. These modes are chosen randomly per CPU.
          * 
          * -- getRecommendBody --
          * 0: Only the Standard body is selected.
@@ -37,7 +37,7 @@ BEGIN_NAMESPACE(RaceSys)
          * Otherwise: The tire is selected 100% at random, except for the Gold tires.
          * 
          * -- getRecommendWing --
-         * 0: Randomly select one of the two recommended tires from `s_recommended_wings`.
+         * 0: Randomly select a recommended wing from `s_recommended_wings`.
          * Otherwise: The wing is selected 100% at random, except for the Gold wing.
          */
         EBodyID getRecommendBody(EDriverID, sead::Random *);
@@ -45,8 +45,8 @@ BEGIN_NAMESPACE(RaceSys)
         EWingID getRecommendWing(EBodyID, sead::Random *);
         void clear();
         /**
-         * Various check are in place in this function that prevents
-         * Mii drivers nor any of the gold parts to be selected for CPUs.
+         * Various check are in place in this function that prevent
+         * Mii drivers as well ass any of the gold parts to be selected for CPUs.
          * 
          * This doesn't take into account StreetPass Miis, which are selected in other code.
          */
@@ -93,7 +93,7 @@ BEGIN_NAMESPACE(RaceSys)
          * In practice, Wiggler and Yoshi's recommended bodies end up overflowing into `s_recommended_bodies_yoshi_and_wiggler`
          * (assuming that `s_recommended_bodies_yoshi_and_wiggler` is indeed a separate array), which isn't even explicitly initialized
          * to any value like with the values from `s_recommended_bodies`.
-         * Because of these, `s_recommended_bodies_yoshi_and_wiggler` is all 0 in practice, which makes both Wiggler and Yoshi
+         * Because of this, `s_recommended_bodies_yoshi_and_wiggler` is all 0 in practice, which makes both Wiggler and Yoshi
          * both have the Standard as the recommended body.
          */
         inline static EBodyID s_recommended_bodies[static_cast<u32>(EDriverID::MAX) - 2][2] =
