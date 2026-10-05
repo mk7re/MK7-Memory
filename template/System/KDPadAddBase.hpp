@@ -6,6 +6,7 @@
 #include "KDPadData.hpp"
 
 #include <container/seadPtrArray.h>
+#include <controller/ctr/seadCtrController.h>
 #include <math/seadVector.h>
 
 BEGIN_NAMESPACE(System)
@@ -18,7 +19,7 @@ BEGIN_NAMESPACE(System)
             /M/s8 m_stick_y/0x1/0x3/
             /M/bool m_update_inputs/0x1/0x4/
             /M/sead::Vector2f m_raw_stick/0x8/0x8/
-            /M/u32 m_raw_buttons/0x4/0x10/
+            /M/u32 m_raw_buttons/0x4/0x10/      // See the `sead::CtrController::buttonEnum` enum
             /M/bool m_holding_start_or_select/0x1/0x14/
             /M/bool m_touch_screen_held/0x1/0x15/
             /M/sead::Vector2s m_touch_input/0x4/0x16/
