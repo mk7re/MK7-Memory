@@ -39,6 +39,6 @@ BEGIN_NAMESPACE(Sound)
         /M/bool m_killer_state/0x1/0x1FE/
         /M/bool m_star_state/0x1/0x1FF/
 
-        static BodySoundInfo s_body_sound_info_list[static_cast<u32>(EBodyID::MAX)];    // 0x005e48b8 (VERSION_EUR_DLP)
+        static BodySoundInfo s_body_sound_info_list[static_cast<u32>(RaceSys::EBodyID::MAX)];    // 0x005e48b8 (VERSION_EUR_DLP)
     /END/
 }
