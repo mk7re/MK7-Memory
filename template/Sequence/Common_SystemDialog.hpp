@@ -159,7 +159,7 @@ BEGIN_NAMESPACE(Sequence)
         /M/s32 m_0x334/0x4/0x334/
         /M/s32 m_0x338/0x4/0x338/
         /M/bool m_0x33c/0x1/0x33c/
-        /M/s32 m_0x340/0x4/0x340/
+        /M/ReturnCode m_error_return_code/0x4/0x340/ // return code the page completes with after a network error
         /M/s32 m_default_option/0x4/0x344/  // 1: Yes, 2: No
         /M/Sound::SndSeEvent::EEvent m_on_menu_enter_sound/0x1/0x348/
         /M/bool m_show_home_disabled_icon/0x1/0x349/

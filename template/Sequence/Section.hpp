@@ -92,15 +92,9 @@ BEGIN_NAMESPACE(Sequence)
         /M/EState m_current_state/0x1/0x14/
         /M/EState m_next_state/0x1/0x15/
         /M/u32 m_sequence_id/0x4/0x18/
-        // In blocks of type `PracticalSectionBlock`, this offset is relative to the start of the mode table modeTable.
-        // Type: SequenceResource::NameTableBlock
-        /M/u16 m_mode_name_item_offset/0x2/0x1C/
-        // This offset is relative to the start of block's enter code table
-        // Type: SequenceResource::NameTableBlock
-        /M/u16 m_enter_code_item_offset/0x2/0x1E/
-        // This offset is relative to the start of block's return code table
-        // Type: SequenceResource::NameTableBlock
-        /M/u16 m_return_code_item_offset/0x2/0x20/
+        /M/u16 m_mode_id/0x2/0x1C/ // mode given by the parent: the mode of a practical section, the block of a sequence
+        /M/u16 m_enter_code_id/0x2/0x1E/ // an m_id of the block's enter code table
+        /M/u16 m_return_code_id/0x2/0x20/ // an m_id of the block's return code table, valid once the section completes
         /M/u32 m_active_time/0x4/0x24/
         /M/u32 m_active_time_2/0x4/0x28/
         /M/EFadeKind m_fade_kind/0x1/0x2C/

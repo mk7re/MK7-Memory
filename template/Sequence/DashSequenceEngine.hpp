@@ -27,6 +27,7 @@ BEGIN_NAMESPACE(Sequence)
         /M/UI::DashMessageWriter *m_message_writer/0x4/0xBC/
         /M/MenuData *m_menu_data/0x4/0xC0/
         /M/SequenceIDTable *m_sequence_id_table/0x4/0xC4/
+        /M/RootExitTask *m_root_exit_task/0x4/0xCC/
         /M/bool m_exit_app/0x1/0xD0/
         /M/UI::TexIDConverter *m_tex_id_converter/0x4/0xD4/
         /M/UI::MessageIDConverter *m_message_id_converter/0x4/0xD8/

@@ -369,6 +369,7 @@ BEGIN_NAMESPACE(Sequence)
 	class ParallelSequence;
 	class PracticalSection;
 	class RacePage;
+	class RootExitTask;
 	class SceneSequence;
 	class SceneSequenceProxy;
 	class Section;

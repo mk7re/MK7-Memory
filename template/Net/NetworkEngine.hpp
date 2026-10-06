@@ -8,8 +8,13 @@ BEGIN_NAMESPACE(Net)
 {
     /START_CLASS/NAME@NetworkEngine/SIZE@0x598/
     public:
+        enum class ENetworkMode : s32 {
+            WIFI = 1,       // online play, with matchmaking through WifiMatchingManager
+        };
+
         RaceSys::EShyGuyColor getShyGuyColor(s32);
 
+        /M/ENetworkMode m_network_mode/0x4/0x134/
         /M/NetworkStationBufferManager *m_network_station_buffer_manager/0x4/0x25C/
         /M/s32 m_local_station_id/0x4/0x264/
         /M/s32 m_local_player_id/0x4/0x268/

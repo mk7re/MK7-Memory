@@ -12,6 +12,10 @@ BEGIN_NAMESPACE(Sequence)
 {
     /START_CLASS/NAME@BootTask/SIZE@0xBC/BASE@LastingTask/BSIZE@0x58/VTABLE@True/
     public:
+        // State of onTaskStep
+        enum class EState : u8 {
+        };
+
         enum class EnterCode : s32
         {
             BOOT_SCENE,

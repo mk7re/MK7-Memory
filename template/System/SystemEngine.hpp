@@ -19,6 +19,10 @@ BEGIN_NAMESPACE(System)
         /M/AppletLaunchThread *m_applet_launch_thread/0x4/0x54/
         /M/BackgroundThread *m_background_thread/0x4/0x58/
         /M/BackgroundLoadThread *m_background_load_thread/0x4/0x5C/
+        /M/bool m_is_exit_started/0x1/0x78/ // Sequence::ExitApp has been called
+        /M/bool m_is_close_requested/0x1/0x79/ // the system asked the application to close
+        /M/bool m_is_title_page_active/0x1/0x7C/ // the title page is running
+        /M/bool m_title_sleep_flag/0x1/0x7D/
 
         void getMyPlayerData(PlayerData *, bool);
     /END/

@@ -3,6 +3,7 @@
 #include "../types.hpp"
 #include "../forward.hpp"
 #include "FaderPage.hpp"
+#include "BootTask.hpp"
 #include "ECup.hpp"
 #include "../RaceSys/EGrandPrixRecord.hpp"
 #include "../RaceSys/RaceInfo/CRaceInfo.hpp"
@@ -52,6 +53,7 @@ BEGIN_NAMESPACE(Sequence)
         /M/MenuSingle_Chara *m_menuwifi_chara/0x4/0x38/
         /M/s32 m_flag_heap_idx/0x4/0x3c/
         /M/sead::ExpHeap *m_flag_heaps[8]/0x20/0x40/
+        /M/BootTask::EState m_boot_task_resume_state/0x1/0x60/ // BootTask state to resume once the Boot scene runs
         /M/u8 m_boot_task_enter_code/0x1/0x61/
         /U/u8/0x1/0x62/
         /M/Fader::EFaderType m_fader_type_top_screen/0x1/0x63/
