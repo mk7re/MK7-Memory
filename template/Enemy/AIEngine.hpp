@@ -34,5 +34,6 @@ BEGIN_NAMESPACE(Enemy)
         /M/RaceSys::ModeManagerBase *m_mode_manager/0x4/0x3C/
         /M/bool m_is_do_as_ai/0x1/0x47/
         /M/bool m_is_net_object/0x1/0x48/
+        /M/u32 m_wall_frames/0x4/0x4C/ // frames in a row touching a wall; above 30 the kart is re-routed
 	/END/
 }

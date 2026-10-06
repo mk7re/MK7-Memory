@@ -1,6 +1,7 @@
 #pragma once
 
 #include "VehicleControlAI.hpp"
+#include "../../KDGndCol/CheckIF_EX.hpp"
 
 BEGIN_NAMESPACE(Kart)
 {
@@ -106,14 +107,21 @@ BEGIN_NAMESPACE(Kart)
 		// The speed of the vehicle that also includes the effect of other external forces. Capped to 30.0f
 		/M/f32 m_xyz_speed/0x4/0xC78/
 		/M/f32 m_xyz_speed_ratio/0x4/0xC7C/
+		// Bit 0 (COLLIDING_WITH_WALL) of m_col_checks[1].m_collision_result is set while the kart touches a wall
+		/M/KDGndCol::CheckIF_EX m_col_checks[5]/0x50/0xC80/
 		/M/s32 m_air_frames/0x4/0xD48/
 		/M/s32 m_ground_frames/0x4/0xD50/
 		/M/sead::Vector3f m_front_pitch/0xC/0xD6C/
+		/M/f32 m_air_rate/0x4/0xD98/ // min(m_air_frames / 20, 1)
+		/M/f32 m_airborne_rate/0x4/0xDA4/ // 0 to 1: +1/20 per frame in the air, -1/20 per frame on the ground
 		/M/s32 m_dokan_warp/0x4/0xDA8/
 		/U/bool/0x1/0xE81/
+		/M/u8 m_drift_state/0x1/0xEF4/ // bits 0x18: the kart is drifting
 		/M/f32 m_miniturbo_charge/0x4/0xF08/
 		/M/f32 m_yaw_strength/0x4/0xF24/
 		/M/f32 m_forward_speed/0x4/0xF2C/
+		/M/f32 m_forward_speed_ratio/0x4/0xF30/ // m_forward_speed / m_current_max_speed_base, 0 when moving backwards
+		/M/sead::Vector3f m_forward_dir/0xC/0xF44/ // a direction of the kart that the AI takes as straight ahead
 		// The current max speed of the vehicle, including the current coin amount.
 		// Doesn't count the max speed when in offroad, etc.
 		/M/f32 m_current_max_speed_base/0x4/0xF80/

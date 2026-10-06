@@ -17,7 +17,7 @@ BEGIN_NAMESPACE(Field)
         void setupPathPointLink(MapdataEnemyPointAccessor *);
 
         /M/MapdataEnemyPointAccessor *m_enemy_point_accessor/0x4/0x18/
-        /U/s32/0x4/0x1C/
+        /M/s32 m_depth_num/0x4/0x1C/ // highest m_depth of the paths + 1
     /END/
 
     inline auto GetEnemyPathAccessor()

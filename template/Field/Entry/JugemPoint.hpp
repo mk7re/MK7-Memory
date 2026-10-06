@@ -16,5 +16,6 @@ BEGIN_NAMESPACE(Field)
     /START_CLASS/NAME@MapdataJugemPoint/SIZE@0x50/BASE@MapdataDataBase<MapdataJugemPointData>/BSIZE@0x4/
     public:
         /M/u8 m_check_point_index/0x1/0x28/ // checkpoint the kart is placed in after respawning here
+        /M/s32 m_nearest_enemy_point/0x4/0x2C/ // route point a CPU resumes from after respawning here, -1 when none
     /END/
 }

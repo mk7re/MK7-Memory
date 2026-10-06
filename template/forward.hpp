@@ -71,6 +71,8 @@ BEGIN_NAMESPACE(Enemy)
 	class AISpeedRaceBase;
 	class AIStuck;
 	class DriveInfo;
+	class GoNextInfo;
+	class PointParam;
 }
 
 BEGIN_NAMESPACE(Field)
@@ -86,7 +88,9 @@ BEGIN_NAMESPACE(Field)
 	class MapdataCheckPathAccessor;
 	class MapdataCheckPointAccessor;
 	class MapdataCourseAccessor;
+	class MapdataEnemyPath;
 	class MapdataEnemyPathAccessor;
+	class MapdataEnemyPoint;
 	class MapdataEnemyPointAccessor;
 	class MapdataGeoObj;
 	class MapdataGeoObjAccessor;

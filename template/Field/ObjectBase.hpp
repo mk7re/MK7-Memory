@@ -155,7 +155,7 @@ BEGIN_NAMESPACE(Field)
         /M/u32 m_flags/0x4/0x6C/    // See the `ObjectFlags` enum
         /M/EObjectClipArg m_arg/0x4/0x70/
         /M/ELodState m_lod_state/0x4/0x74/
-        /M/bool m_cpu_should_avoid_object/0x1/0x78/
+        /M/bool m_ai_signal/0x1/0x78/ // a state the object shows to the CPUs; its meaning depends on the object type
         /M/bool m_is_active/0x1/0x79/
         /M/bool m_update_culling/0x1/0x7A/
         /M/bool m_is_culled/0x1/0x7B/
