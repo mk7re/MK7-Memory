@@ -6,3 +6,6 @@
 # MK7-Memory
 build
 include
+
+# User local files
+local/

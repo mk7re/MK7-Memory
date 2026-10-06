@@ -13,3 +13,6 @@
 [submodule "vendor/libc"]
 	path = vendor/libc
 	url = https://github.com/mk7re/libc.git
+[submodule "mk7-llm-research"]
+	path = mk7-llm-research
+	url = https://github.com/mk7re/mk7-llm-research.git
