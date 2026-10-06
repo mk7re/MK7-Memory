@@ -12,7 +12,7 @@ LLMs are used to aid on research and documentation of the game (see [mk7-llm-res
 
 The tooling inside the the LLM workspace is fully AI generated, and its purpose is to aid agents on the research process instead of having to recreate scripts every time they are needed. Use at your own risk.
 
-Due to the current legal uncertanties of AI generated content, everything that lies inside the LLM workspace is public domain, including tooling and documentation (see [mk7-llm-research LICENSE](mk7-llm-research/LICENSE)).
+Due to the current legal uncertainties of AI generated content, everything that lies inside the LLM workspace is public domain, including tooling and documentation (see [mk7-llm-research LICENSE](mk7-llm-research/LICENSE)).
 
 ## Build
 
