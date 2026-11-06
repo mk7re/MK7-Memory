@@ -77,9 +77,9 @@ BEGIN_NAMESPACE(Demo)
         // This array holds those cameras associated to each AREA,
         // with the exception of the "Goal" camera, as well as any cameras
         // with the "nextVideoIndex" value (field 0x2 of CAME's SData) set to 0
-        /M/sead::PtrArray<Camera::DemoCameraBase> m_area_cameras/0xC/0x40/
+        /M/sead::PtrArray<Demo::DemoCameraBase> m_area_cameras/0xC/0x40/
         // The cameras active in the course preview and awards
-        /M/sead::PtrArray<Camera::DemoCameraBase> m_demo_cameras/0xC/0x4c/
+        /M/sead::PtrArray<Demo::DemoCameraBase> m_demo_cameras/0xC/0x4c/
         /M/Camera::CameraBase *m_current_camera/0x4/0x58/
         /M/Demo::DemoCameraBase *m_current_demo_camera/0x4/0x5c/
         /M/Demo::DemoCameraGoal *m_goal_camera/0x4/0x60/
