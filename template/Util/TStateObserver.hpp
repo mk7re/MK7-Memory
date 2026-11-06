@@ -53,6 +53,13 @@ BEGIN_NAMESPACE(Util)
         virtual void executeState(void) { // 3
             update();
         }
+
+        inline void changeState(u8 new_state) {
+            m_state_previous = m_state_current;
+            m_state_current = new_state;
+            m_state_change = true;
+            m_state_counter = 0;
+        }
         
         /M/u8 m_state_current/0x1/0x4/
         /M/u8 m_state_previous/0x1/0x5/
