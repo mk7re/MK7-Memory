@@ -8,6 +8,7 @@
 #include "../Field/Entry/Area.hpp"
 #include "../Camera/CameraBase.hpp"
 #include "../RaceSys/ECourseID.hpp"
+#include "../Util/TLinkNode.hpp"
 
 #include <container/seadPtrArray.h>
 #include <prim/seadDelegate.h>
@@ -70,14 +71,15 @@ BEGIN_NAMESPACE(Demo)
         void stateGoal();
         void stateWait();
         
-        /U/s32/0x4/0x8/
-        /U/s32/0x4/0xc/
-        /U/s32/0x4/0x10/
+        /M/Util::TLinkNode<DemoCameraDirector> m_node/0xC/0x8/
         /M/Util::TStateObserver<DemoCameraDirector> m_state_observer/0x20/0x14/
         /M/sead::PtrArray<Field::MapdataArea> m_mapdata_area_array/0xC/0x34/
-        /M/sead::PtrArray<Camera::CameraBase> m_goal_cameras/0xC/0x40/
+        // This array holds those cameras associated to each AREA,
+        // with the exception of the "Goal" camera, as well as any cameras
+        // with the "nextVideoIndex" value (field 0x2 of CAME's SData) set to 0
+        /M/sead::PtrArray<Camera::DemoCameraBase> m_area_cameras/0xC/0x40/
         // The cameras active in the course preview and awards
-        /M/sead::PtrArray<Camera::CameraBase> m_demo_cameras/0xC/0x4c/
+        /M/sead::PtrArray<Camera::DemoCameraBase> m_demo_cameras/0xC/0x4c/
         /M/Camera::CameraBase *m_current_camera/0x4/0x58/
         /M/Demo::DemoCameraBase *m_current_demo_camera/0x4/0x5c/
         /M/Demo::DemoCameraGoal *m_goal_camera/0x4/0x60/
@@ -97,7 +99,7 @@ BEGIN_NAMESPACE(Demo)
         /M/bool m_is_initialized/0x1/0x9c/
         /U/u8/0x1/0x9d/
         /M/bool m_is_respawning/0x1/0x9e/
-        /M/s8 m_goal_camera_index/0x1/0x9f/
+        /M/s8 m_area_camera_index/0x1/0x9f/
         /M/bool m_is_replay/0x1/0xa0/
         /M/bool m_was_first_person/0x1/0xa1/
         /M/bool m_is_first_person/0x1/0xa2/

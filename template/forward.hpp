@@ -11,6 +11,8 @@ BEGIN_NAMESPACE(BoxCol)
 BEGIN_NAMESPACE(Camera)
 {
 	class CameraBase;
+	class CameraChase;
+	class CameraDemo;
 	class CameraEngine;
 	class FinalOutputCamera;
 	class KartCameraDirector;
