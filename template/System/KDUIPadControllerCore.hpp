@@ -6,7 +6,7 @@
 
 BEGIN_NAMESPACE(System)
 {
-    /START_CLASS/NAME@KDUIPadControllerCore/SIZE@0x15c/BASE@KDPadControllerCore/BSIZE@0x15c/
+    /START_CLASS/NAME@KDUIPadControllerCore/SIZE@0x160/BASE@KDPadControllerCore/BSIZE@0x160/
     public:
         virtual ~KDUIPadControllerCore();
         virtual void calcImpl_();
