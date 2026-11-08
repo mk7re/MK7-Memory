@@ -19,7 +19,7 @@ BEGIN_NAMESPACE(Demo)
     /START_CLASS/NAME@DemoCameraDirector/SIZE@0xA4/BASE@Object::Actor/BSIZE@0x8/
     public:
         enum class EState : u8 {
-            INIT,
+            WAIT,
             NORMAL,
             NORMAL_WITH_DUMMY_START,
             START,
