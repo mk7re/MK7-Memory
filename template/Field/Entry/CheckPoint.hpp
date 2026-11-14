@@ -15,7 +15,9 @@ BEGIN_NAMESPACE(Field)
         /M/s8 m_check_point_type/0x1/0x11/
         /M/s8 m_check_point_prev/0x1/0x12/
         /M/s8 m_check_point_next/0x1/0x13/
-        /U/u8/0x1/0x14/
+        // QuadCell::m_clip_id_flags bit that culls the course while the culling target kart is in this checkpoint.
+        // -1 (and 32 or more) culls nothing
+        /M/s8 m_clip_id/0x1/0x14/
         // -1 on most checkpoints. On 1-lap courses it marks where a section starts: reaching this checkpoint sets
         // LapRankChecker::KartInfo::m_section to this value + 1. On 3-lap courses, 1 lets the kart change to this
         // checkpoint from any other one, offline even across key checkpoint sections.

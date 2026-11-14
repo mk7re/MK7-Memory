@@ -111,6 +111,12 @@ BEGIN_NAMESPACE(Field)
 	class MenuVRModel;
 	class ObjectDirector;
 	class QuadTree;
+	struct CameraData;
+	class QuadTreeThread;
+	class QuadCell;
+	class QuadInvisibleWall;
+	class DivFile;
+	class FieldModel;
 	class ObjectBase;
 	class ObjectBdBoard;
 	class ObjectTcBoard;
