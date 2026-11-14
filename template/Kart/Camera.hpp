@@ -46,8 +46,10 @@ BEGIN_NAMESPACE(Kart)
         /M/bool m_is_master_player/0x1/0xd5/
         /M/InfoProxy *m_info_proxy/0x4/0xd8/
         /M/Vehicle *m_vehicle/0x4/0xdc/
+        /M/sead::Vector3f m_up_dir/0xc/0xe0/ // up direction of the camera, tilting with the kart
         /M/sead::Vector3f m_target_vehicle_position/0xc/0x130/
         /M/sead::Vector3f m_target_position/0xc/0x13c/
+        /M/sead::Vector3f m_look_dir/0xc/0x164/ // from the camera position to its look-at point, not normalized
         /M/f32 m_fovy/0x4/0x170/
         /M/f32 m_depth_level/0x4/0x17c/
         /M/KDGndCol::CheckIF_EX m_check_if_ex/0x10/0x1c0/

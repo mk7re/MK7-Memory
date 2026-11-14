@@ -9,3 +9,6 @@ include
 
 # User local files
 local/
+
+# Python cache folder
+__pycache__/

@@ -134,6 +134,8 @@ BEGIN_NAMESPACE(Effect)
         /M/bool m_display_miniturbo_lvl_2/0x1/0x20a/
         /M/bool m_is_miniturbo_over_lvl_1/0x1/0x20b/
         /M/bool m_is_miniturbo_over_lvl_2/0x1/0x20c/
+        /M/s32 m_env_area_index/0x4/0x69c/ // AREA entry of the environment effect area the kart was in last frame, -1 none
+        /M/GLOBAL_NAMESPACE::Camera::CameraBase *m_camera/0x4/0x6a0/ // the screen camera
         /M/bool m_is_first_person/0x1/0x6d4/
         /M/bool m_was_first_person/0x1/0x6d5/
         /M/f32 m_waterbox_height/0x4/0x754/

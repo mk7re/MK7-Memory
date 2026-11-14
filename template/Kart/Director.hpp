@@ -35,6 +35,7 @@ BEGIN_NAMESPACE(Kart)
         /M/bool m_is_battle/0x1/0x188/
         /M/bool m_is_net_object/0x1/0x189/
         /M/bool m_is_demo/0x1/0x18A/
+        /M/bool m_is_kart_hidden/0x1/0x18B/ // the karts are not drawn
         /M/bool m_has_audience/0x1/0x18C/
         /M/bool m_is_racing/0x1/0x190/
         /M/u32 m_frame_since_countdown/0x4/0x198/

@@ -2,6 +2,7 @@
 
 #include "VehicleControlAI.hpp"
 #include "../../KDGndCol/CheckIF_EX.hpp"
+#include "../../KDGndCol/CollisionFlags.hpp"
 
 BEGIN_NAMESPACE(Kart)
 {
@@ -109,13 +110,15 @@ BEGIN_NAMESPACE(Kart)
 		/M/f32 m_xyz_speed_ratio/0x4/0xC7C/
 		// Bit 0 (COLLIDING_WITH_WALL) of m_col_checks[1].m_collision_result is set while the kart touches a wall
 		/M/KDGndCol::CheckIF_EX m_col_checks[5]/0x50/0xC80/
+		/M/f32 m_waterbox_height/0x4/0xCDC/ // height of the water surface the kart is checked against
+		/M/KDGndCol::ECollisionTypes m_gnd_col_type/0x4/0xD14/ // collision type of the ground under the kart
 		/M/s32 m_air_frames/0x4/0xD48/
 		/M/s32 m_ground_frames/0x4/0xD50/
 		/M/sead::Vector3f m_front_pitch/0xC/0xD6C/
 		/M/f32 m_air_rate/0x4/0xD98/ // min(m_air_frames / 20, 1)
 		/M/f32 m_airborne_rate/0x4/0xDA4/ // 0 to 1: +1/20 per frame in the air, -1/20 per frame on the ground
 		/M/s32 m_dokan_warp/0x4/0xDA8/
-		/U/bool/0x1/0xE81/
+		/M/bool m_is_cannon_wing_path/0x1/0xE81/ // the current glide follows a glide path marked as a cannon path (GLPH byte 0x0F)
 		/M/u8 m_drift_state/0x1/0xEF4/ // bits 0x18: the kart is drifting
 		/M/f32 m_miniturbo_charge/0x4/0xF08/
 		/M/f32 m_yaw_strength/0x4/0xF24/

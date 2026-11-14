@@ -74,11 +74,10 @@ BEGIN_NAMESPACE(Demo)
         /M/Util::TLinkNode<DemoCameraDirector> m_node/0xC/0x8/
         /M/Util::TStateObserver<DemoCameraDirector> m_state_observer/0x20/0x14/
         /M/sead::PtrArray<Field::MapdataArea> m_mapdata_area_array/0xC/0x34/
-        // This array holds those cameras associated to each AREA,
-        // with the exception of the "Goal" camera, as well as any cameras
-        // with the "nextVideoIndex" value (field 0x2 of CAME's SData) set to 0
+        // One camera per entry of m_mapdata_area_array, built from the CAME entry of that camera area. Areas whose
+        // camera is of type GOAL or has a non-zero m_video_next are left out of both arrays
         /M/sead::PtrArray<Demo::DemoCameraBase> m_area_cameras/0xC/0x40/
-        // The cameras active in the course preview and awards
+        // The cameras of the course intro and the award ceremony, in the order of their m_next links
         /M/sead::PtrArray<Demo::DemoCameraBase> m_demo_cameras/0xC/0x4c/
         /M/Camera::CameraBase *m_current_camera/0x4/0x58/
         /M/Demo::DemoCameraBase *m_current_demo_camera/0x4/0x5c/
@@ -87,19 +86,18 @@ BEGIN_NAMESPACE(Demo)
         /M/Kart::InfoProxy *m_kart_info/0x4/0x68/
         /M/sead::Delegate<DemoCameraDirector> m_change_camera_delegate/0x10/0x6c/   // `Demo::DemoCameraDirector::changeCamera`
         /M/RaceSys::ECourseID m_course/0x4/0x7c/
-        /M/s32 m_current_demo_camera_index/0x4/0x80/ // Or current area index?
-        /M/s32 m_next_demo_camera_index/0x4/0x84/
-        /U/s32/0x4/0x88/
-        /U/s32/0x4/0x8c/
+        /M/s32 m_area_index/0x4/0x80/ // index in m_mapdata_area_array of the camera area the kart is in, -1 none
+        /M/s32 m_next_area_index/0x4/0x84/
+        /M/s32 m_demo_camera_index/0x4/0x88/ // index in m_demo_cameras
+        /M/s32 m_next_demo_camera_index/0x4/0x8c/
         /M/s32 m_camera_target_player_id/0x4/0x90/
-        // Counts up to 300
-        /M/s32 m_goal_camerea_active_time/0x4/0x94/
-        // Current camera time while in `Demo::DemoCameraDirector::stateNormal`
-        /M/s32 m_state_normal_current_camera_time/0x4/0x98/
+        /M/s32 m_state_timer/0x4/0x94/ // frames in the current state (course intro, award ceremony, goal)
+        // Frames spent outside every camera area, or inside one while m_is_out_of_area is set
+        /M/s32 m_area_switch_timer/0x4/0x98/
         /M/bool m_is_initialized/0x1/0x9c/
         /U/u8/0x1/0x9d/
         /M/bool m_is_respawning/0x1/0x9e/
-        /M/s8 m_area_camera_index/0x1/0x9f/
+        /M/bool m_is_out_of_area/0x1/0x9f/ // the kart camera is shown because the kart left the camera areas
         /M/bool m_is_replay/0x1/0xa0/
         /M/bool m_was_first_person/0x1/0xa1/
         /M/bool m_is_first_person/0x1/0xa2/
