@@ -3,6 +3,8 @@
 #include "../forward.hpp"
 #include "../types.hpp"
 
+#include <math/seadMatrix.h>
+
 BEGIN_NAMESPACE(Camera)
 {
     /START_CLASS/NAME@CameraEngine/SIZE@0xE8/
