@@ -69,14 +69,14 @@ BEGIN_NAMESPACE(Item)
         virtual void stateInitSelfMoveImpl() {}; // 41
 
         virtual bool hasCollision_InUseState() const { return {}; }; // 42
-        virtual float *getShadowScale() const { return {}; }; // 43
-        virtual float *getPressOffsetY_Shadow() const { return {}; }; // 44
+        virtual float getShadowScale() const { return {}; }; // 43
+        virtual float getPressOffsetY_Shadow() const { return {}; }; // 44
         virtual bool hasLight() const { return {}; }; // 45
-        virtual float *getOffset_Hang_Y() const { return {}; }; // 46
-        virtual float *getOffset_Multi_Y() const { return {}; }; // 47
-        virtual float *getOffset_Multi_Z() const { return {}; }; // 48
-        virtual float *getRotVelRatio_Multi() const { return {}; }; // 49
-        virtual float *getRadius_Multi() const { return {}; }; // 50
+        virtual float getOffset_Hang_Y() const { return {}; }; // 46
+        virtual float getOffset_Multi_Y() const { return {}; }; // 47
+        virtual float getOffset_Multi_Z() const { return {}; }; // 48
+        virtual float getRotVelRatio_Multi() const { return {}; }; // 49
+        virtual float getRadius_Multi() const { return {}; }; // 50
         virtual char const *getVanishEffectName() const { return {}; }; // 51
 
         virtual void stateInitWait() {}; // 52
