@@ -2,6 +2,7 @@
 
 #include "../types.hpp"
 
+#include <3ds/types.h> // FIXME (mii.h): MiiScreenName should be declared after types.h include
 #include <3ds/mii.h> // CFLStoreData
 
 BEGIN_GLOBAL_NAMESPACE
