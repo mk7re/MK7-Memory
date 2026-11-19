@@ -5,6 +5,9 @@
 #include "../Item/eItemType.hpp"
 #include "BaseFastControl.hpp"
 
+#include <container/seadListImpl.h>
+#include <math/seadVectorFwd.h>
+
 #include <nw/lyt/Pane.hpp>
 
 BEGIN_NAMESPACE(UI)
@@ -35,10 +38,8 @@ BEGIN_NAMESPACE(UI)
         /M/nw::lyt::Pane *m_P_item/0x4/0x7c/
         /M/Item::ItemObjBase *m_item_obj/0x4/0x80/
         /M/UI::BgRaceMapControl **m_current_bg_race_map_control/0x4/0x84/
-        /U/void */0x4/0x88/
-        /U/void */0x4/0x8c/
-        /U/f32/0x4/0x90/
-        /U/f32/0x4/0x94/
+        /M/sead::ListNode m_node/0x8/0x88/
+        /M/sead::Vector2f m_position/0x8/0x90/
         /M/Kart::Vehicle *m_vehicle/0x4/0x98/
         /M/void (BgRaceMapItemControl::*m_calc_func)()/0x8/0x9c/
     /END/
