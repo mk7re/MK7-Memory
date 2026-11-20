@@ -30,6 +30,45 @@ BEGIN_NAMESPACE(System)
             /M/PlayerFlagSaveData m_player_flag_save_data/0x800/0x48D0/
         /END/
 
+        void getGrandPrixData(RaceSys::GrandPrixData *grand_prix_data, RaceSys::EGrandPrixID *grand_prix_id, RaceSys::EEngineLevel *engine_level, bool mirror)
+        {
+            RaceSys::EEngineLevel engine;
+            int index;
+            GrandPrixOneData data;
+
+            engine = *engine_level;
+            index = 0;
+
+            if ( engine != RaceSys::EEngineLevel::_50cc )
+            {
+                if ( engine == RaceSys::EEngineLevel::_100cc )
+                {
+                    index = 1;
+                }
+                else if ( engine == RaceSys::EEngineLevel::_150cc )
+                {
+                    if ( mirror )
+                        index = 3;
+                    else
+                        index = 2;
+                }
+            }
+
+            data = m_data.m_grand_prix_data.m_grand_prix_cup_data[std::to_underlying(*grand_prix_id)].m_grand_prix_one_data[index];
+            if ( data.completed )
+            {
+                grand_prix_data->record = static_cast<RaceSys::EGrandPrixRecord>(data.rank);
+                grand_prix_data->trophy = static_cast<RaceSys::EGrandPrixTrophy>(data.trophy);
+                grand_prix_data->valid = true;
+            }
+            else
+            {
+                grand_prix_data->valid = false;
+                grand_prix_data->record = RaceSys::EGrandPrixRecord::NO_RECORD;
+                grand_prix_data->trophy = RaceSys::EGrandPrixTrophy::None;
+            }
+        }
+
         void getPlayerData(PlayerData *);
         bool getGhostUpdate(RaceSys::ECourseID);
         void initCecComment();
@@ -41,7 +80,6 @@ BEGIN_NAMESPACE(System)
         void updatePlayerLogUploadDate();
         bool set(const void *);
         void init();
-        void getGrandPrixData(RaceSys::GrandPrixData *, RaceSys::EGrandPrixID, RaceSys::EEngineLevel, bool) const;
         bool goldHandleIsAvailable() const;
 
         /M/Data m_data/0x50d0/0x0/
