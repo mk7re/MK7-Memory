@@ -7,6 +7,7 @@
 #include "OpponentList.hpp"
 #include "PlayerFlagSaveData.hpp"
 
+#include "../RaceSys/GrandPrixData.hpp"
 #include "../RaceSys/ECourseID.hpp"
 #include "../RaceSys/EDriverID.hpp"
 #include "../RaceSys/EBodyID.hpp"
