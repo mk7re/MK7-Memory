@@ -2,7 +2,7 @@
 
 #include "../types.hpp"
 
-#include <3ds/services/act.h> // CFLStoreData
+#include <3ds/mii.h> // CFLStoreData
 
 BEGIN_GLOBAL_NAMESPACE
 

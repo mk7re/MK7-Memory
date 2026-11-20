@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     
     container:
-      image: devkitpro/devkitarm:20240918
+      image: devkitpro/devkitarm
 
     steps:
     - name: setup
