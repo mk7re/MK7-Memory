@@ -1,10 +1,12 @@
 #pragma once
 
-#include "../types.hpp"
 #include "../forward.hpp"
+#include "../types.hpp"
 
+#include "GrandPrixData.hpp"
 #include "OpponentList.hpp"
 #include "PlayerFlagSaveData.hpp"
+
 #include "../RaceSys/ECourseID.hpp"
 #include "../RaceSys/EDriverID.hpp"
 #include "../RaceSys/EBodyID.hpp"
@@ -16,11 +18,14 @@
 
 BEGIN_NAMESPACE(System)
 {
+    // https://mk3ds.com/index.php?title=Save_File#File_Format
     /START_CLASS/NAME@SystemSaveData/SIZE@0x50D4/
     public:
         // NOTE: Name is made up
         /START_CLASS/NAME@Data/SIZE@0x50D0/
         public:
+            // /M/RankingSaveData m_ranking_save_data/0x600/0x10C/
+            /M/GrandPrixData m_grand_prix_data/0x20/0x70C/
             /M/OpponentList m_opponent_list/0x41A0/0x730/
             /M/PlayerFlagSaveData m_player_flag_save_data/0x800/0x48D0/
         /END/
