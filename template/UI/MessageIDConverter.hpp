@@ -17,20 +17,18 @@
 
 BEGIN_NAMESPACE(UI)
 {
-    class MessageIDConverter
-    {
+    /START_CLASS/NAME@MessageIDConverter/SIZE@0x228/
     public:
-        LMS_MessageID m_driver_short_message_ids[std::to_underlying(RaceSys::EDriverID::MAX)];
-        LMS_MessageID m_driver_message_ids[std::to_underlying(RaceSys::EDriverID::MAX)];
-        LMS_MessageID m_body_message_ids[std::to_underlying(RaceSys::EBodyID::MAX)];
-        LMS_MessageID m_tire_message_ids[std::to_underlying(RaceSys::ETireID::MAX)];
-        LMS_MessageID m_wing_message_ids[std::to_underlying(RaceSys::EWingID::MAX)];
-        LMS_MessageID m_course_message_ids[std::to_underlying(RaceSys::ECourseID::MAX)];
-        LMS_MessageID m_engine_level_message_ids[std::to_underlying(RaceSys::EEngineLevel::MAX)];
-        LMS_MessageID m_grand_prix_message_ids[std::to_underlying(RaceSys::EGrandPrixID::MAX)];
-        LMS_MessageID m_title_type_message_ids[std::to_underlying(RaceSys::ETitleType::MAX)];
-    };
-    static_assert(sizeof(MessageIDConverter) == 0x228);
+        /M/LMS_MessageID m_driver_short_message_ids[std::to_underlying(RaceSys::EDriverID::MAX)]/0x48/0x0/
+        /M/LMS_MessageID m_driver_message_ids[std::to_underlying(RaceSys::EDriverID::MAX)]/0x48/0x48/
+        /M/LMS_MessageID m_body_message_ids[std::to_underlying(RaceSys::EBodyID::MAX)]/0x44/0x90/
+        /M/LMS_MessageID m_tire_message_ids[std::to_underlying(RaceSys::ETireID::MAX)]/0x28/0xD4/
+        /M/LMS_MessageID m_wing_message_ids[std::to_underlying(RaceSys::EWingID::MAX)]/0x1C/0xFC/
+        /M/LMS_MessageID m_course_message_ids[std::to_underlying(RaceSys::ECourseID::MAX)]/0xA0/0x118/
+        /M/LMS_MessageID m_engine_level_message_ids[std::to_underlying(RaceSys::EEngineLevel::MAX)]/0xC/0x1B8/
+        /M/LMS_MessageID m_grand_prix_message_ids[std::to_underlying(RaceSys::EGrandPrixID::MAX)]/0x20/0x1C4/
+        /M/LMS_MessageID m_title_type_message_ids[std::to_underlying(RaceSys::ETitleType::MAX)]/0x44/0x1E4/
+    /END/
 }
 
 BEGIN_NAMESPACE(Sequence)
