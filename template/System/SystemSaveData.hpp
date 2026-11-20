@@ -14,7 +14,7 @@
 #include "../RaceSys/EWingID.hpp"
 #include "../RaceSys/EEngineLevel.hpp"
 #include "../RaceSys/EGrandPrixID.hpp"
-#include "../RaceSys/GrandPrixData.hpp"
+#include "../RaceSys/EGrandPrixRecord.hpp"
 
 BEGIN_NAMESPACE(System)
 {

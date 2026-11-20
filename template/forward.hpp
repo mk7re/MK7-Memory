@@ -316,6 +316,7 @@ BEGIN_NAMESPACE(RaceSys)
 	class CRaceInfo;
 	class CRaceMode;
 	class CTime;
+	class GrandPrixData;
 	class KartInfo;
 	class LapRankChecker;
 	class LogRecorder;
@@ -436,6 +437,7 @@ BEGIN_NAMESPACE(System)
 	class GameScene;
 	class GhostSaveData;
 	class GhostSaveDataHeader;
+	class GrandPrixData;
 	class KDAIPad;
 	class KDPad;
 	class KDPadAddBase;

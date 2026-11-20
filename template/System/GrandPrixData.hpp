@@ -1,8 +1,10 @@
 #pragma once
 
-#include "../common.hpp"
 #include "../types.hpp"
 
+#include "GrandPrixCupData.hpp"
+
+#include "../RaceSys/EGrandPrixID.hpp"
 #include "../RaceSys/EGrandPrixTrophy.hpp"
 
 BEGIN_NAMESPACE(System)
@@ -13,6 +15,7 @@ BEGIN_NAMESPACE(System)
         bool set(const GrandPrixData &);
         void init();
 
+        /*
         inline u8 getTrophyType(u32 cup, u32 engine_class) const {
             return (m_data[cup][engine_class] >> 5) & 0x7;
         }
@@ -40,6 +43,9 @@ BEGIN_NAMESPACE(System)
                 m_data[cup][engine_class] &= ~0x1;
         }
 
-        /M/u8 m_data[NUM_CUPS][NUM_ENGINE_CLASSES]/0x20/0x0/
+        //u8 m_data[NUM_CUPS][NUM_ENGINE_CLASSES]/0x20/0x0/
+        */
+
+        /M/GrandPrixCupData m_grand_prix_cup_data[std::to_underlying(RaceSys::EGrandPrixID::MAX)]/0x20/0x0/
     /END/
 }
