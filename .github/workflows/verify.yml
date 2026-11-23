@@ -14,7 +14,7 @@ jobs:
       run: apt update && apt install -y build-essential cmake g++-multilib
 
     - name: clone
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
       with:
         submodules: recursive
 
