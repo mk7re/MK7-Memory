@@ -59,13 +59,13 @@ BEGIN_NAMESPACE(System)
             data = m_data.m_grand_prix_data.m_grand_prix_cup_data[std::to_underlying(*grand_prix_id)].m_grand_prix_one_data[index];
             if ( data.completed )
             {
-                grand_prix_data->record = static_cast<RaceSys::EGrandPrixRecord>(data.rank);
+                grand_prix_data->record = static_cast<RaceSys::EGrandPrixRecord>(data.record);
                 grand_prix_data->trophy = static_cast<RaceSys::EGrandPrixTrophy>(data.trophy);
-                grand_prix_data->valid = true;
+                grand_prix_data->completed = true;
             }
             else
             {
-                grand_prix_data->valid = false;
+                grand_prix_data->completed = false;
                 grand_prix_data->record = RaceSys::EGrandPrixRecord::NO_RECORD;
                 grand_prix_data->trophy = RaceSys::EGrandPrixTrophy::None;
             }
