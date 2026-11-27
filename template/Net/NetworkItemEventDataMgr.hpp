@@ -39,15 +39,14 @@ BEGIN_NAMESPACE(Net)
         // Below is the most likely pattern for SlotData,
         // with an array of indeterminate size. The game
         // reinterpret_casts the data member to one of
-        // the structs avobe.
-
-        struct SlotData {
-            u32 frame_count;                // (O:0x4,S:0x4)
-            Item::eItemType item_type;      // (O:0x4,S:0x1)
-            EEventType event_type;          // (O:0x5,S:0x1)
-            u8 unk_0x6;                     // (O:0x6,S:0x1) maybe player ID?
-            u8 data_size;                   // (O:0x7,S:0x1)
-            u8 data[];                      // (O:0x8,S:Variable)
-        };
+        // the structs above.
+        /START_STRUCT/NAME@SlotData/SIZE@0x8/
+            /M/u32 frame_count/0x4/0x0/
+            /M/Item::eItemType item_type/0x1/0x4/
+            /M/EEventType event_type/0x1/0x5/
+            /M/u8 unk_0x6/0x1/0x6/ // player ID?
+            /M/u8 data_size/0x1/0x7/
+            /M/u8 data[]/0x0/0x8/
+        /END/
     /END/
 }
