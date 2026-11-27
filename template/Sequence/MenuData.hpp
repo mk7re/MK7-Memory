@@ -76,7 +76,8 @@ BEGIN_NAMESPACE(Sequence)
         /M/bool m_gold_wheel_unlocked[KART_MAX]/0x8/0x640/
         /M/RaceSys::EGrandPrixRecord m_gp_record_per_player[KART_MAX]/0x20/0x648/
         /M/u8 m_ai_level/0x1/0x668/
-        /M/u8 m_selected_option/0x1/0x669/
+        // 0: Choose, 1: Random, 2: In Order
+        /M/u8 m_course_order_option/0x1/0x669/
         /M/s32 m_num_races/0x4/0x66c/   // Total number of races
         /M/s32 m_race_no/0x4/0x670/     // Current race number
         /M/RaceSys::ECourseID m_course_id[NUM_COURSES]/0xA0/0x674/

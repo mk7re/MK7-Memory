@@ -25,8 +25,8 @@ BEGIN_NAMESPACE(Camera)
         /M/creator_t m_creator_list[8]/0x20/0x20/
         /M/FinalOutputCamera *m_final_output_camera/0x4/0x48/
         /M/FinalOutputCamera *m_final_output_camera_2/0x4/0x4c/
-        /U/sead::Matrix33f/0x24/0x58/
-        /U/sead::Matrix33f/0x24/0x7C/
-        /U/sead::Matrix33f/0x24/0xA0/
+        /M/sead::Matrix33f m_billboard_mtx_camera_up/0x24/0x58/   // Uses the camera's original Y-axis as its starting point
+        /M/sead::Matrix33f m_billboard_mtx_world_up/0x24/0x7C/    // Instead of using the camera's up vector, it explicitly uses the world's Y axis
+        /U/sead::Matrix33f/0x24/0xA0/   // Unused?
     /END/
 }

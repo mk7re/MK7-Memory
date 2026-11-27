@@ -14,6 +14,10 @@ BEGIN_NAMESPACE(Net)
 
         RaceSys::EShyGuyColor getShyGuyColor(s32);
 
+        inline bool isOnline() {
+            return m_connected && m_nex_netz != nullptr && !m_is_net_uninitialized;
+        }
+
         /M/ENetworkMode m_network_mode/0x4/0x134/
         /M/void *m_nex_netz/0x4/0x14C/ // nn::nex::NetZ *
         /M/NetworkStationBufferManager *m_network_station_buffer_manager/0x4/0x25C/
