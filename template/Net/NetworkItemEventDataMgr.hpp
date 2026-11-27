@@ -27,13 +27,13 @@ BEGIN_NAMESPACE(Net)
 
         /START_STRUCT/NAME@SSelfMove/SIZE@0x24/
             /M/u8 player_id/0x1/
-            /M/u8 sequence_id/0x1/
+            /M/u8 serial/0x1/
             /M/bool is_dropped/0x1/
             /M/bool is_deflected/0x1/
-            /M/float cpad_y/0x4/
+            /M/f32 cpad_y/0x4/
             /M/sead::Vector3f position/0xC/
             /M/sead::Vector3f velocity/0xC/
-            /M/float gravity/0x4/
+            /M/f32 gravity/0x4/
         /END/
 
         // Below is the most likely pattern for SlotData,
@@ -41,10 +41,10 @@ BEGIN_NAMESPACE(Net)
         // reinterpret_casts the data member to one of
         // the structs above.
         /START_STRUCT/NAME@SlotData/SIZE@0x8/
-            /M/u32 frame_count/0x4/0x0/
+            /M/u32 frame/0x4/0x0/
             /M/Item::eItemType item_type/0x1/0x4/
             /M/EEventType event_type/0x1/0x5/
-            /M/u8 unk_0x6/0x1/0x6/ // player ID?
+            /U/u8/0x1/0x6/ // player ID? unused?
             /M/u8 data_size/0x1/0x7/
             /M/u8 data[]/0x0/0x8/
         /END/
