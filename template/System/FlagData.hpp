@@ -4,44 +4,27 @@
 
 #include "../RaceSys/ETitleType.hpp"
 
-#include <utility>
-
-#define VR_MASK     0x0001FFFF
-#define GP_MASK     0x3F000000
-#define TITLE_MASK  0x003E0000
-
-#define VR_SHIFT    0
-#define GP_SHIFT    24
-#define TITLE_SHIFT 17
-
 BEGIN_NAMESPACE(System)
 {
-    struct FlagData
-    {
-        // Unknown symbol
-        struct ProfileData
-        {
-            u32 packed;
+    /START_STRUCT/NAME@FlagData/SIZE@0x5F4/
+        // NOTE: made up name
+        /START_STRUCT/NAME@ProfileData/SIZE@0x4/
+            /M/u32 vr : 17, title : 5, _unk0 : 2, gp : 6, _unk1 : 2/0x4/0x0/
 
-            u32 get_vr() { return (packed & VR_MASK) >> VR_SHIFT; }
-            void set_vr(u32 vr) { packed = (packed & ~VR_MASK) | ((vr << VR_SHIFT) & VR_MASK); }
+            auto get_vr() { return static_cast<u32>(vr); }
+            void set_vr(u32 value) { vr = value; }
 
-            u32 get_gp() { return (packed & GP_MASK) >> GP_SHIFT; }
-            void set_gp(u32 gp) { packed = (packed & ~GP_MASK) | ((gp << GP_SHIFT) & GP_MASK); }
+            auto get_gp() { return static_cast<u32>(gp); }
+            void set_gp(u32 value) { gp = value; }
 
-            RaceSys::ETitleType get_title() { return static_cast<RaceSys::ETitleType>((packed & TITLE_MASK) >> TITLE_SHIFT); }
-            void set_title(RaceSys::ETitleType title) { packed = (packed & ~TITLE_MASK) | ((std::to_underlying(title) << TITLE_SHIFT) & TITLE_MASK); }
-        };
+            auto get_title() { return static_cast<RaceSys::ETitleType>(title); }
+            void set_title(RaceSys::ETitleType value) { title = std::to_underlying(value); }
+        /END/
 
-        u8 gap_0x0[0x358];
-        u32 coins;
-        u8 gap_0x35C[0x1F8];
-        u32 streetpass_tags;
-        u8 gap_0x558[0xC];
-        u32 wins;
-        u32 losses;
-        ProfileData profile_data;
-        u8 gap_0x570[0x84];
-    };
-    static_assert(sizeof(FlagData) == 0x5F4);
+        /M/u32 coins/0x4/0x358/
+        /M/u32 streetpass_tags/0x4/0x554/
+        /M/u32 wins/0x4/0x564/
+        /M/u32 losses/0x4/0x568/
+        /M/ProfileData profile_data/0x4/0x56C/
+    /END/
 }
