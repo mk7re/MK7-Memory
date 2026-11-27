@@ -1,13 +1,19 @@
 #pragma once
 
-#include <math/seadVector.hpp>
+#include "../types.hpp"
 
 #include "../Item/eItemType.hpp"
-#include "../types.hpp"
+
+#include "NetworkDataManager.hpp"
+#include "NetworkEventModule.hpp"
+#include "NetworkItemEventDataFormatDummy.hpp"
+
+#include <math/seadVector.hpp>
+#include <prim/seadDelegate.h>
 
 BEGIN_NAMESPACE(Net)
 {
-    /START_CLASS/NAME@NetworkItemEventDataMgr/SIZE@0x1/
+    /START_CLASS/NAME@NetworkItemEventDataMgr/SIZE@0x118/BASE@NetworkDataManager<NetworkItemEventDataFormatDummy>/BSIZE@0x50/
     public:
         enum class EEventType : u8
         {
@@ -48,5 +54,9 @@ BEGIN_NAMESPACE(Net)
             /M/u8 data_size/0x1/0x7/
             /M/u8 data[]/0x0/0x8/
         /END/
+
+        /M/NetworkEventModule m_network_event_module/0xB4/0x50/
+        /M/sead::Delegate2R<NetworkItemEventDataMgr, NetworkEventModule::EventHandleArg const &, u8 const *, bool> m_event_handler_delegate/0x10/0x104/
+        /U/void */0x4/0x114/ // itemEventRecvHandler delegate ptr?
     /END/
 }
