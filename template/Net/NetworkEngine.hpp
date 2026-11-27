@@ -15,7 +15,9 @@ BEGIN_NAMESPACE(Net)
         RaceSys::EShyGuyColor getShyGuyColor(s32);
 
         /M/ENetworkMode m_network_mode/0x4/0x134/
+        /M/void *m_nex_netz/0x4/0x14C/ // nn::nex::NetZ *
         /M/NetworkStationBufferManager *m_network_station_buffer_manager/0x4/0x25C/
+        /M/bool m_connected/0x1/0x260/
         /M/s32 m_local_station_id/0x4/0x264/
         /M/s32 m_local_player_id/0x4/0x268/
         /M/s32 m_master_station_id/0x4/0x26C/
@@ -33,5 +35,6 @@ BEGIN_NAMESPACE(Net)
         /M/NetworkPlayerDataManager *m_network_player_data_manager/0x4/0x2B8/
         /M/NetworkGhostUploadManager *m_network_ghost_upload_manager/0x4/0x2BC/
         /M/EventLogger *m_event_logger/0x4/0x2C0/
+        /M/bool m_is_net_uninitialized/0x1/0x503/
     /END/
 }
